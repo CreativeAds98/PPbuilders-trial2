@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <!-- House Roof Contour -->
+  <path d="M 20 50 L 70 15 L 120 50 L 110 50 L 70 23 L 30 50 Z" fill="#8C2F15"/>
+  <rect x="95" y="24" width="10" height="15" fill="#8C2F15"/>
+  
+  <!-- PPI Monogram with Brick Pattern -->
+  <g transform="translate(15, 45)">
+    <!-- First P with Brick texture -->
+    <path d="M 10 0 L 40 0 C 55 0, 55 28, 40 28 L 26 28 L 26 60 L 10 60 Z" fill="#8C2F15"/>
+    <path d="M 26 10 L 38 10 C 44 10, 44 18, 38 18 L 26 18 Z" fill="#FFF"/>
+    <!-- Brick lines on First P -->
+    <line x1="10" y1="14" x2="26" y2="14" stroke="#FFF" stroke-width="1.5"/>
+    <line x1="10" y1="28" x2="26" y2="28" stroke="#FFF" stroke-width="1.5"/>
+    <line x1="10" y1="42" x2="26" y2="42" stroke="#FFF" stroke-width="1.5"/>
+    <line x1="18" y1="0" x2="18" y2="14" stroke="#FFF" stroke-width="1.5"/>
+    <line x1="18" y1="28" x2="18" y2="42" stroke="#FFF" stroke-width="1.5"/>
+    
+    <!-- Second P -->
+    <path d="M 52 0 L 82 0 C 97 0, 97 28, 82 28 L 68 28 L 68 60 L 52 60 Z" fill="#3D2012"/>
+    <path d="M 68 10 L 80 10 C 86 10, 86 18, 80 18 L 68 18 Z" fill="#FFF"/>
+    
+    <!-- I Pillar -->
+    <path d="M 94 0 L 110 0 L 110 60 L 94 60 Z" fill="#8C2F15"/>
+    <line x1="94" y1="15" x2="110" y2="15" stroke="#FFF" stroke-width="1.5"/>
+    <line x1="94" y1="30" x2="110" y2="30" stroke="#FFF" stroke-width="1.5"/>
+    <line x1="94" y1="45" x2="110" y2="45" stroke="#FFF" stroke-width="1.5"/>
+  </g>
+</svg>

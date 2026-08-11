@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - PP BUILDERS & INTERIORS | Free Site Visit Within 48 Hours</title>
+  <meta name="description"
+    content="Contact PP Builders & Interiors for a free site consultation. We visit your plot anywhere in Tamil Nadu within 48 hours. Call +91 98765 43210 or WhatsApp us.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── PAGE BANNER ─────────────────────────────────── */
+    .page-banner {
+      background-image: url('assets/hero_bg.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 90px 0 70px;
+    }
+
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255, 252, 247, .96) 0%, rgba(255, 248, 240, .88) 55%, rgba(255, 245, 235, .32) 100%);
+      z-index: 1;
+    }
+
+    .page-banner-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-brick);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .breadcrumb a {
+      color: var(--terracotta-dark);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--primary-brick);
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .page-subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+
+    /* ── QUICK CONTACT STRIP ─────────────────────────── */
+    .quick-strip {
+      background: var(--terracotta-dark);
+      padding: 28px 0;
+    }
+
+    .quick-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .quick-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .quick-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .quick-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .quick-item:hover .quick-icon {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .quick-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 2px;
+    }
+
+    .quick-text span {
+      font-size: 12px;
+      color: #C4B5AA;
+    }
+
+    .quick-divider {
+      width: 1px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* ── MAIN CONTACT SECTION ────────────────────────── */
+    .contact-main {
+      padding: 80px 0;
+      background: var(--bg-cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Form panel */
+    .form-panel {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-panel h2 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      margin-bottom: 8px;
+    }
+
+    .form-panel>p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--warm-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 7px;
+    }
+
+    .form-group label span {
+      color: var(--primary-brick);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-cream);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text-main);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-brick);
+      background: #FFF;
+      box-shadow: 0 0 0 3px rgba(140, 47, 21, 0.08);
+    }
+
+    .form-control::placeholder {
+      color: var(--text-light);
+    }
+
+    select.form-control {
+      cursor: pointer;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--primary-brick);
+      color: #FFF;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 16px 28px;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-dark-brick);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-submit i {
+      font-size: 16px;
+    }
+
+    .form-trust {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    .form-trust i {
+      color: #27ae60;
+    }
+
+    /* Success message */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .form-success .success-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #E8F8EE;
+      border: 2px solid #4CAF7D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #27ae60;
+      margin: 0 auto 18px;
+    }
+
+    .form-success h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--warm-heading);
+      margin-bottom: 10px;
+    }
+
+    .form-success p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Info cards panel */
+    .info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .info-card {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: var(--transition);
+    }
+
+    .info-card:hover {
+      border-color: var(--border-brick);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .info-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-light-brick);
+      border: 1px solid var(--border-brick);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--primary-brick);
+      flex-shrink: 0;
+    }
+
+    .info-card-header h4 {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--warm-heading);
+    }
+
+    .info-card-body {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .info-card-body strong {
+      color: var(--warm-heading);
+      font-weight: 700;
+    }
+
+    .info-card-body .hours-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border-subtle);
+      padding: 5px 0;
+      font-size: 13px;
+    }
+
+    .info-card-body .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-card-body .hours-row span:last-child {
+      font-weight: 700;
+      color: var(--warm-heading);
+    }
+
+    /* District pills */
+    .district-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .district-pill {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary-brick);
+      background: var(--bg-light-brick);
+      border: 1px solid var(--border-brick);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+
+    /* Social links */
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #FFF;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .social-btn.ig {
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .social-btn.fb {
+      background: #1877F2;
+    }
+
+    .social-btn.yt {
+      background: #FF0000;
+    }
+
+    .social-btn.wa {
+      background: #25D366;
+    }
+
+    /* ── MAP SECTION ─────────────────────────────────── */
+    .map-section {
+      padding: 70px 0 0;
+      background: var(--bg-paper);
+    }
+
+    .map-section .map-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .map-section .map-header h2 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      margin-bottom: 8px;
+    }
+
+    .map-section .map-header p {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    .map-wrapper {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* ── EMERGENCY BOX ───────────────────────────────── */
+    .emergency-box {
+      background: linear-gradient(135deg, var(--terracotta-dark), var(--terracotta-deep));
+      padding: 50px 0;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .emergency-inner {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .emergency-inner i.big {
+      font-size: 48px;
+      color: var(--accent-gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .emergency-inner h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 800;
+      color: #FFF;
+      margin-bottom: 10px;
+    }
+
+    .emergency-inner p {
+      font-size: 15px;
+      color: #C4B5AA;
+      margin-bottom: 22px;
+    }
+
+    .btn-emergency {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFF;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 6px;
+      padding: 13px 28px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-emergency:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .page-title {
+        font-size: 32px;
+      }
+
+      .quick-divider {
+        display: none;
+      }
+
+      .quick-strip-inner {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .page-title {
+        font-size: 26px;
+      }
+
+      .form-panel {
+        padding: 24px 20px;
+      }
+
+      .page-banner {
+        padding: 60px 0 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Site Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-spinner"></div>
+    <div class="preloader-text">PP BUILDERS & INTERIORS</div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <!-- Logo Section -->
+        <a href="index.html" class="brand-logo">
+          <img src="assets/logo.png" alt="PP Builders & Interiors Logo" class="logo-symbol">
+          <div class="brand-divider"></div>
+          <div class="brand-motto">
+            <span class="motto-line1">Crafting Spaces.</span>
+            <span class="motto-line2">Building Relationships.</span>
+          </div>
+        </a>
+
+        <!-- Header Actions & Mobile Hamburger -->
+        <div class="header-actions">
+          <a href="tel:+919876543210" class="phone-contact">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="phone-meta">
+              <span class="phone-label">Call Us Anytime</span>
+              <span class="phone-number">+91 98765 43210</span>
+            </div>
+          </a>
+          <button class="btn-estimate trigger-modal">
+            <i class="fa-solid fa-calculator"></i>
+            GET FREE ESTIMATE <i class="fa-solid fa-arrow-right" style="margin-left:4px;"></i>
+          </button>
+
+          <!-- Mobile Navigation Toggle Button -->
+          <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu(event)"
+            aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pill Navigation Row -->
+      <div class="nav-row">
+        <div class="pill-navbar">
+          <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">
+              <i class="fa-solid fa-house"></i> HOME
+            </a>
+            <a href="about.html" class="nav-link">
+              <i class="fa-regular fa-user"></i> ABOUT US
+            </a>
+            <div class="has-dropdown">
+              <a href="index.html#services" class="nav-link">
+                <i class="fa-solid fa-wrench"></i> SERVICES <i class="fa-solid fa-chevron-down dropdown-arrow"
+                  style="font-size:10px;"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="index.html#services">Turnkey House Construction</a>
+                <a href="index.html#services">Custom Interior Design</a>
+                <a href="index.html#services">Architectural 3D Elevation</a>
+                <a href="index.html#services">Structural Renovation</a>
+                <a href="index.html#services">Courtyard & Landscape Design</a>
+              </div>
+            </div>
+            <a href="project.html" class="nav-link">
+              <i class="fa-regular fa-building"></i> PROJECTS
+            </a>
+            <a href="our-process.html" class="nav-link">
+              <i class="fa-solid fa-gear"></i> OUR PROCESS
+            </a>
+            <a href="material.html" class="nav-link">
+              <i class="fa-solid fa-border-all"></i> MATERIALS
+            </a>
+            <a href="testimonial.html" class="nav-link">
+              <i class="fa-solid fa-quote-left"></i> TESTIMONIALS
+            </a>
+            <a href="contact.html" class="nav-link active">
+              <i class="fa-regular fa-envelope"></i> CONTACT US
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════
+       PAGE BANNER
+  ════════════════════════════════════════════════ -->
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+        <span>Contact Us</span>
+      </div>
+      <h1 class="page-title">Let's Build Something<br>Beautiful Together.</h1>
+      <p class="page-subtitle">Reach out for a free site consultation. Our senior engineer will visit your plot within
+        48 hours — at zero cost, zero obligation.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       QUICK CONTACT STRIP
+  ════════════════════════════════════════════════ -->
+  <div class="quick-strip">
+    <div class="container">
+      <div class="quick-strip-inner">
+
+        <a href="tel:+919876543210" class="quick-item">
+          <div class="quick-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="quick-text">
+            <strong>+91 98765 43210</strong>
+            <span>Call Mon–Sat, 9 AM – 7:30 PM</span>
+          </div>
+        </a>
+
+        <div class="quick-divider"></div>
+
+        <a href="https://wa.me/919876543210" target="_blank" class="quick-item">
+          <div class="quick-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="quick-text">
+            <strong>WhatsApp Us</strong>
+            <span>Instant reply on WhatsApp</span>
+          </div>
+        </a>
+
+        <div class="quick-divider"></div>
+
+        <a href="mailto:contact@ppbuildersinteriors.com" class="quick-item">
+          <div class="quick-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="quick-text">
+            <strong>contact@ppbuildersinteriors.com</strong>
+            <span>24-hour email response</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       MAIN CONTACT — FORM + INFO CARDS
+  ════════════════════════════════════════════════ -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT — Contact Form -->
+        <div class="form-panel">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2>Send Us a Message</h2>
+          <p>Tell us about your project and we'll respond with an honest, detailed reply — no sales pressure, just
+            genuine advice.</p>
+
+          <!-- Success state (shown after submit) -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h3>Message Received!</h3>
+            <p>Thank you for reaching out. Our team will call you back within <strong>24 hours</strong> to discuss your
+              project.</p>
+          </div>
+
+          <!-- The form -->
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name <span>*</span></label>
+                <input type="text" class="form-control" id="fullName" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="your@email.com">
+              </div>
+              <div class="form-group">
+                <label>City / Town / Village <span>*</span></label>
+                <input type="text" class="form-control" id="location" placeholder="e.g. Erode, Karur" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Type of Project</label>
+                <select class="form-control" id="projectType">
+                  <option value="" disabled selected>Choose project type</option>
+                  <option>New House Construction</option>
+                  <option>House Renovation</option>
+                  <option>Interior Design</option>
+                  <option>Commercial Construction</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Budget Range</label>
+                <select class="form-control" id="budget">
+                  <option value="" disabled selected>Select budget range</option>
+                  <option>Below ₹10 Lakhs</option>
+                  <option>₹10 – 25 Lakhs</option>
+                  <option>₹25 – 50 Lakhs</option>
+                  <option>₹50 – 100 Lakhs</option>
+                  <option>Above ₹1 Crore</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Plot Area (sq.ft)</label>
+              <input type="number" class="form-control" id="plotArea" placeholder="e.g. 1200">
+            </div>
+
+            <div class="form-group">
+              <label>Message / Requirements</label>
+              <textarea class="form-control" id="message" rows="4"
+                placeholder="Tell us about your plot size, number of floors, special requirements, timeline, etc."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              SEND MESSAGE &nbsp;<i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <div class="form-trust">
+              <i class="fa-solid fa-lock"></i>
+              Your information is 100% confidential and never shared with third parties.
+            </div>
+          </form>
+        </div>
+
+        <!-- RIGHT — Info Cards -->
+        <div class="info-panel">
+
+          <!-- Office Address -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h4>Main Office</h4>
+            </div>
+            <div class="info-card-body">
+              <strong>No. 42, Civil Lines, Gandhipuram</strong><br>
+              Coimbatore – 641 012, Tamil Nadu<br>
+              <span style="font-size:12px;color:var(--text-light);">Near Gandhipuram Central Bus Stand</span>
+            </div>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon"><i class="fa-solid fa-clock"></i></div>
+              <h4>Working Hours</h4>
+            </div>
+            <div class="info-card-body">
+              <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 7:30 PM</span></div>
+              <div class="hours-row"><span>Saturday</span><span>9:00 AM – 5:00 PM</span></div>
+              <div class="hours-row"><span>Sunday</span><span style="color:#E04040;">Closed</span></div>
+              <div style="margin-top:10px;font-size:12px;color:var(--text-light);">
+                <i class="fa-solid fa-circle-info" style="color:var(--accent-gold);margin-right:5px;"></i>
+                Emergency calls for active projects: +91 98765 43210
+              </div>
+            </div>
+          </div>
+
+          <!-- Free Site Visit -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon"><i class="fa-solid fa-car"></i></div>
+              <h4>Free Site Visit</h4>
+            </div>
+            <div class="info-card-body">
+              We visit your plot anywhere in Tamil Nadu within <strong>48 hours</strong> of inquiry — at zero cost, zero
+              obligation.
+              <div class="district-pills">
+                <span class="district-pill">Coimbatore</span>
+                <span class="district-pill">Erode</span>
+                <span class="district-pill">Salem</span>
+                <span class="district-pill">Tiruppur</span>
+                <span class="district-pill">Karur</span>
+                <span class="district-pill">Namakkal</span>
+                <span class="district-pill">Ooty</span>
+                <span class="district-pill">Dharmapuri</span>
+                <span class="district-pill">& More</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon"><i class="fa-solid fa-share-nodes"></i></div>
+              <h4>Follow Our Work</h4>
+            </div>
+            <div class="info-card-body">
+              See daily construction updates, completed projects, and interior work on our social channels.
+              <div class="social-links">
+                <a href="#" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/919876543210" class="social-btn wa" aria-label="WhatsApp"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /info-panel -->
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       MAP
+  ════════════════════════════════════════════════ -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-header">
+        <span class="section-tag">FIND US</span>
+        <h2>Our Office Location</h2>
+        <p>No. 42, Civil Lines, Gandhipuram, Coimbatore – 641 012</p>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4906978083327!2d76.95505731534977!3d11.016844192152385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af0c1e8b2d%3A0x11e59b90a97f4e63!2sGandhipuram%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%" height="420" style="border:0;display:block;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="PP Builders Office Location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       EMERGENCY CONTACT BOX
+  ════════════════════════════════════════════════ -->
+  <div class="emergency-box">
+    <div class="container">
+      <div class="emergency-inner">
+        <i class="fa-solid fa-headset big"></i>
+        <h3>Need to Reach Us About an Ongoing Project?</h3>
+        <p>Our site supervisors and engineers are reachable 7 days a week for all active construction projects —
+          progress queries, material queries, or any urgent concerns.</p>
+        <a href="tel:+919876543210" class="btn-emergency">
+          <i class="fa-solid fa-phone"></i> CALL EMERGENCY LINE
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo-box" style="margin-bottom:16px;">
+            <img src="assets/logo.png" alt="PP Builders & Interiors Footer Logo" style="height:95px; width:auto;">
+          </div>
+          <p>Rooted in village heritage, built on decades of trust and craftsmanship.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="our-process.html">Our Process</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Turnkey Construction</a></li>
+            <li><a href="index.html#services">Teakwood Interiors</a></li>
+            <li><a href="index.html#services">3D Elevations</a></li>
+            <li><a href="material.html">Our Materials</a></li>
+            <li><a href="index.html#services">House Renovations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Hours</h4>
+          <p><i class="fa-solid fa-phone" style="color:var(--accent-gold);margin-right:8px;"></i>+91 98765 43210</p>
+          <p><i class="fa-solid fa-envelope"
+              style="color:var(--accent-gold);margin-right:8px;"></i>contact@ppbuildersinteriors.com</p>
+          <p><i class="fa-solid fa-clock" style="color:var(--accent-gold);margin-right:8px;"></i>Mon – Sat: 9 AM – 7:30
+            PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PP BUILDERS & INTERIORS. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════
+       ESTIMATE MODAL
+  ════════════════════════════════════════════════ -->
+  <div id="estimateModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div style="text-align:center;margin-bottom:20px;">
+        <span class="section-tag">FREE CONSULTATION</span>
+        <h3 style="font-family:var(--font-serif);font-size:24px;color:var(--warm-heading);margin-top:8px;">Request Free
+          Site Estimate</h3>
+      </div>
+      <form>
+        <div class="form-group"><label>Your Name</label><input type="text" class="form-control"
+            placeholder="Enter your full name" required></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" class="form-control"
+            placeholder="+91 XXXXX XXXXX" required></div>
+        <div class="form-group"><label>Plot Location / Town</label><input type="text" class="form-control"
+            placeholder="City or Village location" required></div>
+        <div class="form-group"><label>Plot Area (sq.ft)</label><input type="number" class="form-control"
+            placeholder="e.g. 1200" required></div>
+        <button type="submit" class="btn-primary-brick"
+          style="width:100%;justify-content:center;margin-top:14px;">SUBMIT ESTIMATE REQUEST</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp & Scroll Up Buttons -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919999999999?text=Hello%20PP%20Builders,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+      target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="scrollTopBtn" class="float-btn scroll-top-btn" aria-label="Scroll to top" title="Scroll to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Contact form submit handler
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Basic validation
+      const name = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const loc = document.getElementById('location').value.trim();
+      if (!name || !phone || !loc) {
+        alert('Please fill in all required fields (Name, Phone, Location).');
+        return;
+      }
+      // Show success
+      this.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      // Scroll to success
+      document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+</body >
+</html >

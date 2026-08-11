@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Process - PP BUILDERS & INTERIORS | How We Build Your Dream Home</title>
+  <meta name="description"
+    content="Discover PP Builders & Interiors' proven 8-step house construction process — from initial site visit & estimation to final key handover. Transparent, honest, on-time delivery.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =====================================================
+       PAGE BANNER (shared inner page hero)
+       ===================================================== */
+    .page-banner {
+      background-image: url('assets/hero_bg.jpg');
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      padding: 90px 0 70px;
+      color: var(--warm-heading);
+    }
+
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+          rgba(255, 252, 247, 0.95) 0%,
+          rgba(255, 248, 240, 0.86) 55%,
+          rgba(255, 245, 235, 0.35) 100%);
+      z-index: 1;
+    }
+
+    .page-banner-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-brick);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .breadcrumb a {
+      color: var(--terracotta-dark);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--primary-brick);
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: 46px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .page-subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 580px;
+    }
+
+    /* =====================================================
+       QUICK-STATS STRIP
+       ===================================================== */
+    .stats-strip {
+      background: var(--terracotta-dark);
+      padding: 26px 0;
+    }
+
+    .stats-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .strip-stat {
+      text-align: center;
+      color: #FFF;
+    }
+
+    .strip-stat .num {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .strip-stat .lbl {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #D6C7BC;
+      margin-top: 4px;
+    }
+
+    .strip-divider {
+      width: 1px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* =====================================================
+       INTRO PROMISE BLOCK
+       ===================================================== */
+    .promise-block {
+      padding: 70px 0 60px;
+      background: var(--bg-cream);
+    }
+
+    .promise-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .promise-text h2 {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .promise-text p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .promise-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .promise-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--bg-paper);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-brick);
+    }
+
+    .promise-badge i {
+      font-size: 13px;
+    }
+
+    .promise-image-stack {
+      position: relative;
+    }
+
+    .promise-img-main {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .promise-img-badge {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--primary-brick);
+      color: #FFF;
+      border-radius: var(--radius-md);
+      padding: 16px 22px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .promise-img-badge strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent-gold);
+    }
+
+    .promise-img-badge span {
+      font-size: 11px;
+      opacity: 0.85;
+    }
+
+    /* =====================================================
+       PROCESS TIMELINE — 8 STEPS
+       ===================================================== */
+    .process-section {
+      padding: 80px 0 100px;
+      background: var(--bg-paper);
+    }
+
+    .process-steps-wrapper {
+      position: relative;
+      margin-top: 60px;
+    }
+
+    /* Vertical connector line */
+    .process-steps-wrapper::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--border-brick), var(--border-subtle));
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Even steps: card on right, icon in center, info on left */
+    .step-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      transition: var(--transition);
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-brick);
+    }
+
+    /* Odd steps: card on left */
+    .process-step.step-left .step-card {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .process-step.step-left .step-center {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .process-step.step-left .step-empty {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    /* Even steps: card on right */
+    .process-step.step-right .step-empty {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .process-step.step-right .step-center {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .process-step.step-right .step-card {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    .step-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--primary-brick);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 0 4px #FFF, 0 0 0 6px var(--border-brick);
+      flex-shrink: 0;
+    }
+
+    .step-number {
+      font-family: var(--font-serif);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-light);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .step-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--primary-brick);
+      background: var(--bg-light-brick);
+      border: 1px solid var(--border-brick);
+      border-radius: 999px;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+
+    .step-card h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--warm-heading);
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .step-duration {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .step-duration i {
+      font-size: 13px;
+    }
+
+    .step-deliverables {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .deliverable-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-sand);
+      border-radius: 4px;
+      padding: 3px 8px;
+    }
+
+    /* =====================================================
+       GOLDEN CTA BANNER
+       ===================================================== */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--terracotta-dark) 0%, var(--terracotta-deep) 100%);
+      padding: 70px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .cta-banner-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-banner h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 800;
+      color: #FFF;
+      margin-bottom: 14px;
+    }
+
+    .cta-banner p {
+      font-size: 16px;
+      color: #D6C7BC;
+      max-width: 520px;
+      margin: 0 auto 28px;
+    }
+
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-gold);
+      color: #FFF;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 6px;
+      padding: 14px 28px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-gold:hover {
+      background: #C45D1E;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFF;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 6px;
+      padding: 13px 26px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* =====================================================
+       FAQ ACCORDION
+       ===================================================== */
+    .faq-section {
+      padding: 80px 0;
+      background: var(--bg-cream);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--bg-paper);
+      transition: var(--transition);
+    }
+
+    .faq-item.open {
+      border-color: var(--border-brick);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--warm-heading);
+      text-align: left;
+    }
+
+    .faq-question i {
+      flex-shrink: 0;
+      font-size: 13px;
+      color: var(--primary-brick);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding: 0 22px;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 22px 18px;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+    @media (max-width: 900px) {
+      .page-title {
+        font-size: 32px;
+      }
+
+      .promise-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .promise-img-badge {
+        left: 12px;
+        bottom: 12px;
+      }
+
+      /* Collapse timeline to single column */
+      .process-steps-wrapper::before {
+        left: 26px;
+      }
+
+      .process-step {
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: auto auto;
+      }
+
+      .process-step.step-left .step-card,
+      .process-step.step-right .step-card {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .process-step.step-left .step-center,
+      .process-step.step-right .step-center {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .process-step.step-left .step-empty,
+      .process-step.step-right .step-empty {
+        display: none;
+      }
+
+      .step-center {
+        align-items: flex-start;
+        padding-top: 4px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .page-title {
+        font-size: 26px;
+      }
+
+      .page-subtitle {
+        font-size: 14px;
+      }
+
+      .strip-divider {
+        display: none;
+      }
+
+      .stats-strip-inner {
+        gap: 16px;
+      }
+
+      .cta-banner h2 {
+        font-size: 26px;
+      }
+
+      .page-banner {
+        padding: 60px 0 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Site Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-spinner"></div>
+    <div class="preloader-text">PP BUILDERS & INTERIORS</div>
+  </div>
+
+  <!-- =========================================================
+       1. HEADER & NAVIGATION
+       ========================================================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <!-- Logo Section -->
+        <a href="index.html" class="brand-logo">
+          <img src="assets/logo.png" alt="PP Builders & Interiors Logo" class="logo-symbol">
+          <div class="brand-divider"></div>
+          <div class="brand-motto">
+            <span class="motto-line1">Crafting Spaces.</span>
+            <span class="motto-line2">Building Relationships.</span>
+          </div>
+        </a>
+
+        <!-- Header Actions & Mobile Hamburger -->
+        <div class="header-actions">
+          <a href="tel:+919876543210" class="phone-contact">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="phone-meta">
+              <span class="phone-label">Call Us Anytime</span>
+              <span class="phone-number">+91 98765 43210</span>
+            </div>
+          </a>
+          <button class="btn-estimate trigger-modal">
+            <i class="fa-solid fa-calculator"></i>
+            GET FREE ESTIMATE <i class="fa-solid fa-arrow-right" style="margin-left:4px;"></i>
+          </button>
+
+          <!-- Mobile Navigation Toggle Button -->
+          <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu(event)"
+            aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pill Navigation Row -->
+      <div class="nav-row">
+        <div class="pill-navbar">
+          <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">
+              <i class="fa-solid fa-house"></i> HOME
+            </a>
+            <a href="about.html" class="nav-link">
+              <i class="fa-regular fa-user"></i> ABOUT US
+            </a>
+            <div class="has-dropdown">
+              <a href="index.html#services" class="nav-link">
+                <i class="fa-solid fa-wrench"></i> SERVICES <i class="fa-solid fa-chevron-down dropdown-arrow"
+                  style="font-size:10px;"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="index.html#services">Turnkey House Construction</a>
+                <a href="index.html#services">Custom Interior Design</a>
+                <a href="index.html#services">Architectural 3D Elevation</a>
+                <a href="index.html#services">Structural Renovation</a>
+                <a href="index.html#services">Courtyard & Landscape Design</a>
+              </div>
+            </div>
+            <a href="project.html" class="nav-link">
+              <i class="fa-regular fa-building"></i> PROJECTS
+            </a>
+            <a href="our-process.html" class="nav-link active">
+              <i class="fa-solid fa-gear"></i> OUR PROCESS
+            </a>
+            <a href="material.html" class="nav-link">
+              <i class="fa-solid fa-border-all"></i> MATERIALS
+            </a>
+            <a href="testimonial.html" class="nav-link">
+              <i class="fa-solid fa-quote-left"></i> TESTIMONIALS
+            </a>
+            <a href="contact.html" class="nav-link">
+              <i class="fa-regular fa-envelope"></i> CONTACT US
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       2. PAGE BANNER
+       ========================================================= -->
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+        <span>Our Process</span>
+      </div>
+      <h1 class="page-title">How We Build Your Dream Home —<br>Step by Step, Brick by Brick.</h1>
+      <p class="page-subtitle">A transparent, structured 8-stage journey — from the first site visit to handing over
+        your keys — with zero surprises along the way.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. QUICK STATS STRIP
+       ========================================================= -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-strip-inner">
+        <div class="strip-stat">
+          <div class="num">450+</div>
+          <div class="lbl">Homes Completed</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-stat">
+          <div class="num">98%</div>
+          <div class="lbl">On-Time Delivery</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-stat">
+          <div class="num">8</div>
+          <div class="lbl">Defined Build Stages</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-stat">
+          <div class="num">25+</div>
+          <div class="lbl">Years of Experience</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-stat">
+          <div class="num">0</div>
+          <div class="lbl">Hidden Charges</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       4. INTRO PROMISE BLOCK
+       ========================================================= -->
+  <section class="promise-block">
+    <div class="container">
+      <div class="promise-inner">
+        <div class="promise-text">
+          <span class="section-tag">OUR COMMITMENT</span>
+          <h2>A Process Built Around Your Peace of Mind</h2>
+          <p>
+            At PP Builders & Interiors, we believe the house-building journey should be as memorable as the home itself.
+            Too many families face project delays, surprise costs, and poor communication with their contractors.
+          </p>
+          <p>
+            We fix that with a systematic, milestone-driven construction process. You receive progress reports,
+            photographic documentation at every stage, and zero deviation from the signed estimate.
+          </p>
+          <div class="promise-badges">
+            <div class="promise-badge"><i class="fa-solid fa-file-contract"></i> Signed Fixed Estimate</div>
+            <div class="promise-badge"><i class="fa-solid fa-camera"></i> Daily Progress Photos</div>
+            <div class="promise-badge"><i class="fa-solid fa-bell"></i> WhatsApp Stage Alerts</div>
+            <div class="promise-badge"><i class="fa-solid fa-shield-halved"></i> 10-Year Warranty Card</div>
+          </div>
+        </div>
+
+        <div class="promise-image-stack">
+          <img src="assets/hero_bg.jpg" alt="PP Builders construction process" class="promise-img-main" loading="lazy">
+          <div class="promise-img-badge">
+            <strong>100%</strong>
+            <span>On-Budget Completion Rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. PROCESS TIMELINE — 8 STEPS (ALTERNATING SIDES)
+       ========================================================= -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">THE JOURNEY</span>
+        <h2 class="section-title">Our 8-Stage Construction Process</h2>
+        <p class="section-desc">Every home we build follows this proven workflow — ensuring quality, clarity, and
+          confidence at every milestone.</p>
+      </div>
+
+      <div class="process-steps-wrapper">
+
+        <!-- STEP 1 — LEFT -->
+        <div class="process-step step-left">
+          <div class="step-card">
+            <span class="step-tag">Stage 01</span>
+            <h3>Free Site Visit & Initial Consultation</h3>
+            <p>Our senior civil engineer visits your plot, evaluates soil type, drainage, road access, and orientation.
+              You get an honest initial discussion on construction feasibility, approximate costs, and realistic
+              timelines — all at zero charge.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 1–2 Days
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">Site Evaluation Report</span>
+              <span class="deliverable-tag">Soil Suitability Notes</span>
+              <span class="deliverable-tag">Rough Estimate Sketch</span>
+            </div>
+          </div>
+          <div class="step-center">
+            <div class="step-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="step-number">Step 01</div>
+          </div>
+          <div class="step-empty"></div>
+        </div>
+
+        <!-- STEP 2 — RIGHT -->
+        <div class="process-step step-right">
+          <div class="step-empty"></div>
+          <div class="step-center">
+            <div class="step-circle"><i class="fa-solid fa-pencil-ruler"></i></div>
+            <div class="step-number">Step 02</div>
+          </div>
+          <div class="step-card">
+            <span class="step-tag">Stage 02</span>
+            <h3>Architectural Design & 3D Floor Plan</h3>
+            <p>Our in-house architects design a fully customized floor plan aligned with your family's lifestyle, Vastu
+              principles, and local municipal regulations. We provide a detailed 3D exterior elevation and interior
+              layout walkthrough for your approval before any work starts.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 5–10 Days
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">3D Elevation Render</span>
+              <span class="deliverable-tag">2D Floor Plan</span>
+              <span class="deliverable-tag">Vastu-Certified Layout</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 — LEFT -->
+        <div class="process-step step-left">
+          <div class="step-card">
+            <span class="step-tag">Stage 03</span>
+            <h3>Detailed Estimate & Agreement Signing</h3>
+            <p>A comprehensive itemized cost breakdown — covering every material, labour charge, and finishing — is
+              presented for your review. After mutual agreement, a formal construction contract is signed with a defined
+              payment schedule tied to build milestones, not arbitrary dates.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 2–3 Days
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">BOQ Document</span>
+              <span class="deliverable-tag">Milestone Schedule</span>
+              <span class="deliverable-tag">Signed Agreement</span>
+            </div>
+          </div>
+          <div class="step-center">
+            <div class="step-circle"><i class="fa-solid fa-file-signature"></i></div>
+            <div class="step-number">Step 03</div>
+          </div>
+          <div class="step-empty"></div>
+        </div>
+
+        <!-- STEP 4 — RIGHT -->
+        <div class="process-step step-right">
+          <div class="step-empty"></div>
+          <div class="step-center">
+            <div class="step-circle"><i class="fa-solid fa-trowel-bricks"></i></div>
+            <div class="step-number">Step 04</div>
+          </div>
+          <div class="step-card">
+            <span class="step-tag">Stage 04</span>
+            <h3>Foundation & Structural Work</h3>
+            <p>Site clearing, foundation digging, PCC bed preparation, column footing, and anti-termite treatment form
+              the critical base. We use M20/M25 concrete mix with TMT steel bars as per structural engineer
+              specifications. This is the most critical phase — done without shortcuts.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 3–5 Weeks
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">Foundation Certificate</span>
+              <span class="deliverable-tag">Column Layout Photo</span>
+              <span class="deliverable-tag">Anti-Termite Receipt</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5 — LEFT -->
+        <div class="process-step step-left">
+          <div class="step-card">
+            <span class="step-tag">Stage 05</span>
+            <h3>Brick Masonry & RCC Frame Construction</h3>
+            <p>Only 100% kiln-burnt red soil bricks are used in walls. RCC beams, columns, and slab shuttering are
+              executed floor by floor. Our masons are experienced in traditional brick bonding techniques that
+              dramatically improve thermal insulation and wall strength over hollow/fly-ash alternatives.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 8–16 Weeks
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">Brick Quality Test Report</span>
+              <span class="deliverable-tag">Stage Completion Photos</span>
+              <span class="deliverable-tag">Concrete Mix Certificate</span>
+            </div>
+          </div>
+          <div class="step-center">
+            <div class="step-circle"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="step-number">Step 05</div>
+          </div>
+          <div class="step-empty"></div>
+        </div>
+
+        <!-- STEP 6 — RIGHT -->
+        <div class="process-step step-right">
+          <div class="step-empty"></div>
+          <div class="step-center">
+            <div class="step-circle"><i class="fa-solid fa-plug-circle-check"></i></div>
+            <div class="step-number">Step 06</div>
+          </div>
+          <div class="step-card">
+            <span class="step-tag">Stage 06</span>
+            <h3>Plumbing, Electrical & Waterproofing</h3>
+            <p>Concealed copper wiring with MCB protection, ISI-marked CPVC plumbing lines, and terrace/bathroom
+              waterproofing using crystalline chemical compounds are installed during this phase. All electrical and
+              plumbing work is executed before plastering to ensure clean, hidden routing.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 3–4 Weeks
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">Electrical Layout Drawing</span>
+              <span class="deliverable-tag">Plumbing Pressure Test</span>
+              <span class="deliverable-tag">Waterproofing Report</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 7 — LEFT -->
+        <div class="process-step step-left">
+          <div class="step-card">
+            <span class="step-tag">Stage 07</span>
+            <h3>Plastering, Tiling & Teakwood Finishes</h3>
+            <p>Double-coat cement plastering, granite/vitrified tile flooring, seasoned teak main doors, and window
+              frames with mosquito mesh shutters bring the structure to life. Interior paint, ceiling false-work,
+              modular kitchen, and wardrobe fitting complete the living space transformation.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 5–8 Weeks
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">Finish Material Selections</span>
+              <span class="deliverable-tag">Teak Grade Certificate</span>
+              <span class="deliverable-tag">Tile Layout Plan</span>
+            </div>
+          </div>
+          <div class="step-center">
+            <div class="step-circle"><i class="fa-solid fa-brush"></i></div>
+            <div class="step-number">Step 07</div>
+          </div>
+          <div class="step-empty"></div>
+        </div>
+
+        <!-- STEP 8 — RIGHT -->
+        <div class="process-step step-right">
+          <div class="step-empty"></div>
+          <div class="step-center">
+            <div class="step-circle" style="background: var(--accent-gold);"><i class="fa-solid fa-key"></i></div>
+            <div class="step-number">Step 08</div>
+          </div>
+          <div class="step-card" style="border-color: var(--border-brick);">
+            <span class="step-tag">Stage 08 — Final</span>
+            <h3>Quality Inspection & Key Handover</h3>
+            <p>A thorough joint inspection walkthrough is conducted with the homeowner. Any finishing punch-list items
+              are resolved within 7 days. The official 10-Year Structural Warranty Card, all completion certificates,
+              and the NOC from our engineer are handed over along with your home keys.</p>
+            <div class="step-duration">
+              <i class="fa-regular fa-clock"></i> Duration: 3–5 Days
+            </div>
+            <div class="step-deliverables">
+              <span class="deliverable-tag">10-Year Warranty Card</span>
+              <span class="deliverable-tag">Completion Certificate</span>
+              <span class="deliverable-tag">House Keys 🗝️</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. CTA BANNER
+       ========================================================= -->
+  <section class="cta-banner">
+    <div class="container cta-banner-inner">
+      <h2>Ready to Start Your Home-Building Journey?</h2>
+      <p>Book a free site visit today. Our team will be at your plot within 48 hours — no obligation, no cost.</p>
+      <div class="cta-actions">
+        <button class="btn-gold trigger-modal">
+          <i class="fa-solid fa-calculator"></i>
+          GET FREE ESTIMATE
+        </button>
+        <a href="tel:+919876543210" class="btn-outline-white">
+          <i class="fa-solid fa-phone"></i>
+          CALL US NOW
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. FAQ ACCORDION
+       ========================================================= -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">YOUR QUESTIONS ANSWERED</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Everything families ask us before and during construction.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to build a complete house with PP Builders?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Typically 9–16 months for a standard 2-floor house, depending on plot size, number of floors, and finishes
+            selected. We provide a milestone-based timeline at the estimate stage so you always know the expected
+            completion date.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I make design changes after construction begins?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Minor changes (wall partitions, door positions, fixture placements) are possible during the masonry phase
+            with a revised estimate. Major structural changes after foundation and column work are discouraged as they
+            affect both cost and timeline significantly.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What does the 10-Year Warranty actually cover?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            The warranty covers structural elements — foundation integrity, RCC roof slab, external terrace
+            waterproofing, and all load-bearing walls. It does not cover cosmetic wear and tear, paint fading, or
+            accidental damage. A warranty card with details is handed at the key ceremony.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How are payments structured? Do you take a large advance?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Payments are milestone-linked — typically 10% booking advance, then subsequent payments at foundation
+            completion, roof slab, plastering, and final handover. We never ask for large lump-sum advances disconnected
+            from construction progress.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you handle government building plan approval?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Yes. We assist with municipal plan submission, local body approvals, and panchayat permits (depending on the
+            region). Our team handles the paperwork and coordinates with local authorities on your behalf as part of our
+            turnkey service.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Why do you only use red kiln-burnt bricks and not fly-ash or hollow bricks?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Red kiln-burnt bricks offer 3x better compressive strength, natural thermal insulation (keeping interiors
+            3°C–5°C cooler), and superior moisture resistance compared to fly-ash or hollow blocks. Homes built with
+            them last significantly longer — and that is a non-negotiable quality standard for us.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       8. FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo-box" style="margin-bottom:16px;">
+            <img src="assets/logo.png" alt="PP Builders & Interiors Footer Logo" style="height:95px; width:auto;">
+          </div>
+          <p>Rooted in village heritage, built on decades of trust and craftsmanship. Crafting homes brick by brick with
+            honesty and architectural strength.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="our-process.html">Our Process</a></li>
+            <li><a href="index.html#projects">Project Gallery</a></li>
+            <li><a href="index.html#calculator">Cost Estimator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Turnkey Construction</a></li>
+            <li><a href="index.html#services">Teakwood Interiors</a></li>
+            <li><a href="index.html#services">3D Elevations</a></li>
+            <li><a href="index.html#services">Traditional Courtyards</a></li>
+            <li><a href="index.html#services">House Renovations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Hours</h4>
+          <p><i class="fa-solid fa-phone" style="color:var(--accent-gold); margin-right:8px;"></i> +91 98765 43210</p>
+          <p><i class="fa-solid fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i>
+            contact@ppbuildersinteriors.com</p>
+          <p><i class="fa-solid fa-clock" style="color:var(--accent-gold); margin-right:8px;"></i> Mon - Sat: 9:00 AM -
+            7:30 PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 PP BUILDERS & INTERIORS. All Rights Reserved. Rooted in Villages. Built on Trust.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       9. ESTIMATE MODAL
+       ========================================================= -->
+  <div id="estimateModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div style="text-align:center; margin-bottom:20px;">
+        <span class="section-tag">FREE CONSULTATION</span>
+        <h3 style="font-family:var(--font-serif); font-size:24px; color:var(--warm-heading); margin-top:8px;">Request
+          Free Site Estimate</h3>
+      </div>
+      <form>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label>Plot Location / Town</label>
+          <input type="text" class="form-control" placeholder="City or Village location" required>
+        </div>
+        <div class="form-group">
+          <label>Plot Area (sq.ft)</label>
+          <input type="number" class="form-control" placeholder="e.g. 1200" required>
+        </div>
+        <button type="submit" class="btn-primary-brick" style="width:100%; justify-content:center; margin-top:14px;">
+          SUBMIT ESTIMATE REQUEST
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    /* FAQ Accordion */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+
+</html>

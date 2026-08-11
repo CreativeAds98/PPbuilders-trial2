@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Materials - PP BUILDERS & INTERIORS | Only the Finest. No Compromises.</title>
+  <meta name="description"
+    content="PP Builders & Interiors uses only ISI-certified, Grade-A materials — 100% kiln-burnt red bricks, seasoned teakwood, Fe-500D TMT steel, and certified concrete mixes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner {
+      background-image: url('assets/hero_bg.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 90px 0 70px;
+    }
+
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255, 252, 247, 0.95) 0%, rgba(255, 248, 240, 0.86) 55%, rgba(255, 245, 235, 0.35) 100%);
+      z-index: 1;
+    }
+
+    .page-banner-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-brick);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .breadcrumb a {
+      color: var(--terracotta-dark);
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .page-subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+
+    /* Intro quality badges */
+    .intro-section {
+      padding: 70px 0;
+      background: var(--bg-cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-text h2 {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .intro-text p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .quality-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .quality-badge-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-paper);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      transition: var(--transition);
+    }
+
+    .quality-badge-card:hover {
+      border-color: var(--border-brick);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(4px);
+    }
+
+    .quality-badge-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--bg-light-brick);
+      border: 1px solid var(--border-brick);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--primary-brick);
+      flex-shrink: 0;
+    }
+
+    .quality-badge-card h5 {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--warm-heading);
+      margin-bottom: 3px;
+    }
+
+    .quality-badge-card p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    /* Material Feature Cards (alternating) */
+    .materials-section {
+      padding: 80px 0;
+      background: var(--bg-paper);
+    }
+
+    .material-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .material-block:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .material-block.reverse {
+      direction: rtl;
+    }
+
+    .material-block.reverse>* {
+      direction: ltr;
+    }
+
+    .material-visual {
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 70px;
+      color: rgba(255, 255, 255, 0.85);
+      position: relative;
+      background-size: cover !important;
+      background-position: center !important;
+    }
+
+    .material-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.55) 100%);
+      z-index: 1;
+    }
+
+    .material-visual .mat-icon {
+      z-index: 1;
+    }
+
+    .material-visual .mat-tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #FFF;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 999px;
+      padding: 4px 12px;
+      backdrop-filter: blur(4px);
+    }
+
+    .material-content {
+      padding: 36px 38px;
+      background: var(--bg-cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .material-content .section-tag {
+      margin-bottom: 10px;
+    }
+
+    .material-content h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      margin-bottom: 12px;
+    }
+
+    .material-content p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .specs-table tr {
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .specs-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .specs-table td {
+      padding: 9px 0;
+      font-size: 13px;
+    }
+
+    .specs-table td:first-child {
+      color: var(--text-light);
+      font-weight: 700;
+      width: 45%;
+    }
+
+    .specs-table td:last-child {
+      color: var(--warm-heading);
+      font-weight: 600;
+    }
+
+    /* Quality Promise Banner */
+    .promise-banner {
+      background: linear-gradient(135deg, var(--terracotta-dark), var(--terracotta-deep));
+      padding: 60px 0;
+    }
+
+    .promise-cols {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .promise-col {
+      color: #FFF;
+    }
+
+    .promise-col i {
+      font-size: 36px;
+      color: var(--accent-gold);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .promise-col .big-stat {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 800;
+      color: #FFF;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .promise-col .small-lbl {
+      font-size: 12px;
+      color: #D6C7BC;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* CTA */
+    .mat-cta {
+      background: var(--bg-cream);
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .mat-cta h2 {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      margin-bottom: 12px;
+    }
+
+    .mat-cta p {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 28px;
+    }
+
+    .mat-cta-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-brick {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-brick);
+      color: #FFF;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 6px;
+      padding: 14px 28px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-brick:hover {
+      background: var(--primary-dark-brick);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline-brick {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--primary-brick);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid var(--border-brick);
+      border-radius: 6px;
+      padding: 13px 26px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-outline-brick:hover {
+      background: var(--primary-brick);
+      color: #FFF;
+    }
+
+    @media (max-width: 900px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .material-block,
+      .material-block.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+
+      .material-visual {
+        height: 220px;
+      }
+
+      .material-content {
+        padding: 28px 24px;
+      }
+
+      .promise-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .page-title {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .promise-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .page-title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Site Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-spinner"></div>
+    <div class="preloader-text">PP BUILDERS & INTERIORS</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <!-- Logo Section -->
+        <a href="index.html" class="brand-logo">
+          <img src="assets/logo.png" alt="PP Builders & Interiors Logo" class="logo-symbol">
+          <div class="brand-divider"></div>
+          <div class="brand-motto">
+            <span class="motto-line1">Crafting Spaces.</span>
+            <span class="motto-line2">Building Relationships.</span>
+          </div>
+        </a>
+
+        <!-- Header Actions & Mobile Hamburger -->
+        <div class="header-actions">
+          <a href="tel:+919876543210" class="phone-contact">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="phone-meta">
+              <span class="phone-label">Call Us Anytime</span>
+              <span class="phone-number">+91 98765 43210</span>
+            </div>
+          </a>
+          <button class="btn-estimate trigger-modal">
+            <i class="fa-solid fa-calculator"></i>
+            GET FREE ESTIMATE <i class="fa-solid fa-arrow-right" style="margin-left:4px;"></i>
+          </button>
+
+          <!-- Mobile Navigation Toggle Button -->
+          <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu(event)"
+            aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pill Navigation Row -->
+      <div class="nav-row">
+        <div class="pill-navbar">
+          <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">
+              <i class="fa-solid fa-house"></i> HOME
+            </a>
+            <a href="about.html" class="nav-link">
+              <i class="fa-regular fa-user"></i> ABOUT US
+            </a>
+            <div class="has-dropdown">
+              <a href="index.html#services" class="nav-link">
+                <i class="fa-solid fa-wrench"></i> SERVICES <i class="fa-solid fa-chevron-down dropdown-arrow"
+                  style="font-size:10px;"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="index.html#services">Turnkey House Construction</a>
+                <a href="index.html#services">Custom Interior Design</a>
+                <a href="index.html#services">Architectural 3D Elevation</a>
+                <a href="index.html#services">Structural Renovation</a>
+                <a href="index.html#services">Courtyard & Landscape Design</a>
+              </div>
+            </div>
+            <a href="project.html" class="nav-link">
+              <i class="fa-regular fa-building"></i> PROJECTS
+            </a>
+            <a href="our-process.html" class="nav-link">
+              <i class="fa-solid fa-gear"></i> OUR PROCESS
+            </a>
+            <a href="material.html" class="nav-link active">
+              <i class="fa-solid fa-border-all"></i> MATERIALS
+            </a>
+            <a href="testimonial.html" class="nav-link">
+              <i class="fa-solid fa-quote-left"></i> TESTIMONIALS
+            </a>
+            <a href="contact.html" class="nav-link">
+              <i class="fa-regular fa-envelope"></i> CONTACT US
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+        <span>Materials</span>
+      </div>
+      <h1 class="page-title">Only the Finest Materials.<br>Absolutely No Compromises.</h1>
+      <p class="page-subtitle">Every brick, every beam, every tile is handpicked against strict quality standards. We
+        use zero fly-ash, zero hollow blocks, and zero substandard steel.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-tag">WHY MATERIALS MATTER</span>
+          <h2>The Difference Between a House That Lasts 30 Years and One That Lasts 300 Years</h2>
+          <p>In our 25+ years, we've seen homes built on compromised materials crumble in under a decade. Fly-ash bricks
+            absorb moisture. Hollow blocks crack under load. Low-grade steel rusts through RCC within 15 years.</p>
+          <p>That's why we made a non-negotiable commitment at our founding: <strong>only Grade-A, ISI-certified, tested
+              materials</strong> will go into a home we build.</p>
+        </div>
+        <div class="quality-badges">
+          <div class="quality-badge-card">
+            <div class="quality-badge-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div>
+              <h5>ISI Certified Only</h5>
+              <p>Every material carries BIS/ISI certification — steel, cement, pipes, and electrical fittings.</p>
+            </div>
+          </div>
+          <div class="quality-badge-card">
+            <div class="quality-badge-icon"><i class="fa-solid fa-ban"></i></div>
+            <div>
+              <h5>Zero Fly-Ash Bricks</h5>
+              <p>We strictly prohibit fly-ash or hollow blocks on all our construction sites — no exceptions.</p>
+            </div>
+          </div>
+          <div class="quality-badge-card">
+            <div class="quality-badge-icon"><i class="fa-solid fa-flask-vial"></i></div>
+            <div>
+              <h5>Third-Party Lab Tests</h5>
+              <p>Concrete cube tests and brick compression tests are conducted by independent certified labs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIAL BLOCKS -->
+  <section class="materials-section">
+    <div class="container">
+
+      <!-- 1. Red Bricks -->
+      <div class="material-block">
+        <div class="material-visual" style="background-image: url('assets/mat_red_bricks.png');">
+          <span class="mat-tag">STRUCTURAL CORE</span>
+          <i class="fa-solid fa-cubes-stacked mat-icon"></i>
+        </div>
+        <div class="material-content">
+          <span class="section-tag">WALLING</span>
+          <h3>100% Red Kiln-Burnt Bricks</h3>
+          <p>Sourced from licensed kilns using iron-rich clay soil, our bricks are fired at 900°C–1100°C for maximum
+            density and strength. They provide natural thermal mass — keeping interiors 3°C–5°C cooler than fly-ash
+            equivalents without any AC support.</p>
+          <table class="specs-table">
+            <tr>
+              <td>Size</td>
+              <td>230 × 110 × 75 mm</td>
+            </tr>
+            <tr>
+              <td>Grade</td>
+              <td>Class A+ (IS:1077)</td>
+            </tr>
+            <tr>
+              <td>Comp. Strength</td>
+              <td>≥ 75 kg/cm²</td>
+            </tr>
+            <tr>
+              <td>Water Absorption</td>
+              <td>&lt; 15%</td>
+            </tr>
+            <tr>
+              <td>Source</td>
+              <td>Licensed Registered Kilns</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. Teakwood -->
+      <div class="material-block reverse">
+        <div class="material-visual" style="background-image: url('assets/mat_teakwood.png');">
+          <span class="mat-tag">PREMIUM JOINERY</span>
+          <i class="fa-solid fa-door-open mat-icon"></i>
+        </div>
+        <div class="material-content">
+          <span class="section-tag">DOORS & FRAMES</span>
+          <h3>First-Grade Seasoned Teakwood</h3>
+          <p>We use Grade-A Indian teak (Tectona grandis) seasoned for a minimum of 5 years, reducing moisture content
+            to below 12%. Natural silica and teak oil make it termite-resistant, dimensionally stable, and long-lasting
+            without chemical treatment.</p>
+          <table class="specs-table">
+            <tr>
+              <td>Species</td>
+              <td>Tectona grandis (Teak)</td>
+            </tr>
+            <tr>
+              <td>Grade</td>
+              <td>Grade A — First Quality</td>
+            </tr>
+            <tr>
+              <td>Seasoning</td>
+              <td>5+ Years Air & Kiln Dry</td>
+            </tr>
+            <tr>
+              <td>Moisture Content</td>
+              <td>&lt; 12%</td>
+            </tr>
+            <tr>
+              <td>Usage</td>
+              <td>Main Doors, Frames, Stairs</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3. TMT Steel -->
+      <div class="material-block">
+        <div class="material-visual" style="background-image: url('assets/mat_tmt_steel.png');">
+          <span class="mat-tag">RCC SKELETON</span>
+          <i class="fa-solid fa-bars mat-icon"></i>
+        </div>
+        <div class="material-content">
+          <span class="section-tag">REINFORCEMENT</span>
+          <h3>Fe-500D TMT Steel Bars</h3>
+          <p>Our RCC structures use Fe-500D Thermo Mechanically Treated steel bars conforming to IS:1786. The ribbed
+            profile ensures superior concrete bonding, while the D-grade certification confirms earthquake-resistant
+            ductility under seismic loading.</p>
+          <table class="specs-table">
+            <tr>
+              <td>Grade</td>
+              <td>Fe-500D (IS:1786)</td>
+            </tr>
+            <tr>
+              <td>Yield Strength</td>
+              <td>≥ 500 MPa</td>
+            </tr>
+            <tr>
+              <td>Rib Pattern</td>
+              <td>Earthquake-Resistant</td>
+            </tr>
+            <tr>
+              <td>Corrosion</td>
+              <td>Epoxy-Coated Variants Used</td>
+            </tr>
+            <tr>
+              <td>Brand</td>
+              <td>TATA Tiscon / JSW Neosteel</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 4. Granite & Tiles -->
+      <div class="material-block reverse">
+        <div class="material-visual" style="background-image: url('assets/mat_granite_tiles.png');">
+          <span class="mat-tag">FLOORING</span>
+          <i class="fa-solid fa-border-all mat-icon"></i>
+        </div>
+        <div class="material-content">
+          <span class="section-tag">FLOORING WORKS</span>
+          <h3>Granite & Full-Body Vitrified Tiles</h3>
+          <p>Living areas receive full-body polished vitrified tiles (800×800mm) with near-zero porosity. Bathrooms and
+            kitchens use anti-skid vitrified tiles. Heritage and traditional homes are offered natural granite slabs
+            from Tamil Nadu quarries.</p>
+          <table class="specs-table">
+            <tr>
+              <td>Living Area</td>
+              <td>Full-Body Vitrified (800×800mm)</td>
+            </tr>
+            <tr>
+              <td>Bathroom</td>
+              <td>Anti-Skid Vitrified Tiles</td>
+            </tr>
+            <tr>
+              <td>Traditional</td>
+              <td>Natural Granite Slabs</td>
+            </tr>
+            <tr>
+              <td>Thickness</td>
+              <td>18–20 mm</td>
+            </tr>
+            <tr>
+              <td>Porosity</td>
+              <td>&lt; 0.1% (Full-Body)</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 5. Plumbing -->
+      <div class="material-block">
+        <div class="material-visual" style="background-image: url('assets/mat_cpvc_pipes.png');">
+          <span class="mat-tag">PLUMBING</span>
+          <i class="fa-solid fa-faucet mat-icon"></i>
+        </div>
+        <div class="material-content">
+          <span class="section-tag">WATER SUPPLY</span>
+          <h3>ISI-Marked CPVC Plumbing Pipes</h3>
+          <p>Astral and Supreme brand CPVC pipes rated for both hot and cold water (up to 93°C) are used for internal
+            plumbing. Solvent-welded joints eliminate the risk of leaks. UV-resistant external pipes are used for
+            terrace and outdoor routing.</p>
+          <table class="specs-table">
+            <tr>
+              <td>Brand</td>
+              <td>Astral / Supreme CPVC</td>
+            </tr>
+            <tr>
+              <td>Rating</td>
+              <td>Hot & Cold (Up to 93°C)</td>
+            </tr>
+            <tr>
+              <td>Pressure Rating</td>
+              <td>15 kg/cm²</td>
+            </tr>
+            <tr>
+              <td>Joints</td>
+              <td>Solvent-Welded (Zero Leak)</td>
+            </tr>
+            <tr>
+              <td>Certification</td>
+              <td>ISI Marked (IS:15778)</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 6. Concrete -->
+      <div class="material-block reverse">
+        <div class="material-visual" style="background-image: url('assets/mat_concrete_mix.png');">
+          <span class="mat-tag">STRUCTURAL CONCRETE</span>
+          <i class="fa-solid fa-industry mat-icon"></i>
+        </div>
+        <div class="material-content">
+          <span class="section-tag">FOUNDATION & SLAB</span>
+          <h3>M20 / M25 Certified Concrete Mix</h3>
+          <p>OPC 53-grade cement with controlled water-cement ratio (0.40–0.45) forms our structural mix. Every RCC pour
+            is vibrated using needle vibrators and cured for minimum 28 days. Independent lab cube tests at 7-day and
+            28-day intervals validate strength.</p>
+          <table class="specs-table">
+            <tr>
+              <td>Cement Grade</td>
+              <td>OPC 53 (IS:12269)</td>
+            </tr>
+            <tr>
+              <td>Mix Design</td>
+              <td>M20 (Slab) / M25 (Columns)</td>
+            </tr>
+            <tr>
+              <td>W/C Ratio</td>
+              <td>0.40 – 0.45</td>
+            </tr>
+            <tr>
+              <td>Curing Period</td>
+              <td>28 Days Minimum</td>
+            </tr>
+            <tr>
+              <td>Cube Test</td>
+              <td>7-Day & 28-Day Certified</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROMISE BANNER -->
+  <section class="promise-banner">
+    <div class="container">
+      <div class="promise-cols">
+        <div class="promise-col">
+          <i class="fa-solid fa-ban"></i>
+          <div class="big-stat">0%</div>
+          <div class="small-lbl">Fly-Ash Bricks Used</div>
+        </div>
+        <div class="promise-col">
+          <i class="fa-solid fa-certificate"></i>
+          <div class="big-stat">100%</div>
+          <div class="small-lbl">ISI Certified Steel</div>
+        </div>
+        <div class="promise-col">
+          <i class="fa-solid fa-tree"></i>
+          <div class="big-stat">5+ Yrs</div>
+          <div class="small-lbl">Seasoned Teakwood</div>
+        </div>
+        <div class="promise-col">
+          <i class="fa-solid fa-flask-vial"></i>
+          <div class="big-stat">28-Day</div>
+          <div class="small-lbl">Concrete Cube Tested</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mat-cta">
+    <div class="container">
+      <span class="section-tag">VISIT US</span>
+      <h2>Want to See Our Materials in Person?</h2>
+      <p>Come to our office or active construction site. We'll show you the bricks, teak samples, and steel grade
+        certificates face to face.</p>
+      <div class="mat-cta-btns">
+        <button class="btn-brick trigger-modal"><i class="fa-solid fa-calendar-check"></i> BOOK SITE VISIT</button>
+        <a href="contact.html" class="btn-outline-brick"><i class="fa-solid fa-phone"></i> CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo-box" style="margin-bottom:16px;">
+            <img src="assets/logo.png" alt="PP Builders & Interiors Footer Logo" style="height:95px; width:auto;">
+          </div>
+          <p>Rooted in village heritage, built on decades of trust and craftsmanship.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="our-process.html">Our Process</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Turnkey Construction</a></li>
+            <li><a href="index.html#services">Teakwood Interiors</a></li>
+            <li><a href="index.html#services">3D Elevations</a></li>
+            <li><a href="material.html">Our Materials</a></li>
+            <li><a href="index.html#services">House Renovations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Hours</h4>
+          <p><i class="fa-solid fa-phone" style="color:var(--accent-gold);margin-right:8px;"></i>+91 98765 43210</p>
+          <p><i class="fa-solid fa-envelope"
+              style="color:var(--accent-gold);margin-right:8px;"></i>contact@ppbuildersinteriors.com</p>
+          <p><i class="fa-solid fa-clock" style="color:var(--accent-gold);margin-right:8px;"></i>Mon - Sat: 9AM – 7:30PM
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PP BUILDERS & INTERIORS. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="estimateModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div style="text-align:center;margin-bottom:20px;">
+        <span class="section-tag">FREE CONSULTATION</span>
+        <h3 style="font-family:var(--font-serif);font-size:24px;color:var(--warm-heading);margin-top:8px;">Request Free
+          Site Estimate</h3>
+      </div>
+      <form>
+        <div class="form-group"><label>Your Name</label><input type="text" class="form-control"
+            placeholder="Enter your full name" required></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" class="form-control"
+            placeholder="+91 XXXXX XXXXX" required></div>
+        <div class="form-group"><label>Plot Location / Town</label><input type="text" class="form-control"
+            placeholder="City or Village location" required></div>
+        <div class="form-group"><label>Plot Area (sq.ft)</label><input type="number" class="form-control"
+            placeholder="e.g. 1200" required></div>
+        <button type="submit" class="btn-primary-brick"
+          style="width:100%;justify-content:center;margin-top:14px;">SUBMIT ESTIMATE REQUEST</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp & Scroll Up Buttons -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919999999999?text=Hello%20PP%20Builders,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+      target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="scrollTopBtn" class="float-btn scroll-top-btn" aria-label="Scroll to top" title="Scroll to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
