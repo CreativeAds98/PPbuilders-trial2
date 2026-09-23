@@ -21,6 +21,12 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
   <style>
     /* Inner Page Hero Styling */
     .page-banner {
@@ -93,12 +99,12 @@
 
     .value-card {
       position: relative;
-      background: linear-gradient(165deg, #FFFFFF 0%, #FAF6F0 100%);
+      background: #FFFFFF;
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
       padding: 36px 26px 30px 26px;
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      box-shadow: 0 6px 20px rgba(61, 35, 20, 0.04);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -252,13 +258,16 @@
 
     /* Founder Message Box */
     .founder-box {
-      background: linear-gradient(135deg, var(--terracotta-dark), var(--terracotta-deep));
-      color: #FFF;
+      background: linear-gradient(135deg, #FFF9F5 0%, #FAF2EA 100%);
+      color: var(--text-main);
+      border: 1.5px solid var(--border-brick);
+      border-left: 6px solid var(--primary-brick);
       border-radius: var(--radius-lg);
       padding: 50px;
       margin: 70px 0;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(224, 83, 38, 0.06);
     }
 
     .founder-quote {
@@ -267,19 +276,19 @@
       font-style: italic;
       line-height: 1.6;
       margin-bottom: 24px;
-      color: #FAF6F0;
+      color: var(--warm-heading);
     }
 
     .founder-info h5 {
       font-family: var(--font-serif);
       font-size: 20px;
       font-weight: 800;
-      color: var(--accent-gold);
+      color: var(--primary-brick);
     }
 
     .founder-info p {
       font-size: 13px;
-      color: #D6C7BC;
+      color: var(--text-muted);
     }
 
     /* Craftsmanship Features */
@@ -469,33 +478,70 @@
   <section class="about-section">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image-wrapper">
-          <img src="assets/hero_bg.jpg" alt="PP Builders Village Construction Site" class="about-img-main"
-            loading="lazy">
-          <div class="experience-badge">
+        <!-- Collage Art matching reference layout -->
+        <div class="about-collage-art">
+          <!-- Decorative Background Arc Line with Accent Dots -->
+          <svg class="collage-line-accent" viewBox="0 0 500 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 320 50 C 375 65, 425 110, 430 165 C 435 210, 415 250, 390 280" stroke="#d35427" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="390" cy="85" r="5.5" fill="#d35427"/>
+            <circle cx="430" cy="165" r="4" fill="#d35427"/>
+          </svg>
+
+          <!-- Main Arch: Traditional South Indian Courtyard House -->
+          <div class="collage-arch-outer">
+            <div class="collage-arch-inner">
+              <img src="assets/about_courtyard.jpg" alt="Traditional South Indian Courtyard House" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Overlapping Circle: Skilled Mason Laying Red Bricks -->
+          <div class="collage-circle-craftsman">
+            <img src="assets/about_mason.jpg" alt="Master Mason Laying Red Bricks" loading="lazy">
+          </div>
+
+          <!-- Overlapping Rounded Rectangle: Terracotta Carving Detail -->
+          <div class="collage-rect-carving">
+            <img src="assets/about_carving.jpg" alt="Intricate Terracotta Relief Carving" loading="lazy">
+          </div>
+
+          <!-- Floating Badge: 25+ Years of Trust -->
+          <div class="collage-badge-trust">
             <div class="years">25+</div>
-            <div class="text">Years Legacy</div>
+            <div class="badge-divider"><span></span></div>
+            <div class="text">Years of Trust</div>
           </div>
         </div>
+
+        <!-- Right Content matching reference layout -->
         <div class="about-content">
-          <span class="section-tag">OUR JOURNEY</span>
-          <h2>A Quarter-Century of Building Honest Homes Across Regions.</h2>
-          <p>
-            Founded in 2001, <strong>PP Builders & Interiors</strong> originated in the fertile villages of South India
-            with a single principle: <em>a family's house should stand strong for generations without compromising on
-              material quality or financial honesty.</em>
-          </p>
-          <p>
-            We bridges traditional village masonry—like sun-baked & kiln-burnt red soil bricks, stone courtyards, and
-            hand-carved teakwood—with contemporary 3D architectural engineering, earthquake-resistant steel structures,
-            and modern interior modular designs.
+          <span class="heritage-pill">HERITAGE & CRAFTSMANSHIP</span>
+          <h2 class="heritage-heading">Rooted in Village Heritage.<br>Engineered for Generations.</h2>
+          <p class="heritage-paragraph">
+            At <strong>PP Builders & Interiors</strong>, we understand that building a house isn't just about concrete
+            and steel—it's about weaving family heritage into lasting mortar. Born in the heart of rural craftsmanship,
+            our foundation rests on traditional building values, kiln-fired red clay bricks, and genuine seasoned
+            teakwood. Whether constructing a classic South Indian traditional courtyard home or a sleek contemporary
+            village estate, we bring uncompromising honesty, 3D architectural precision, and direct site supervision to
+            every square foot.
           </p>
 
-          <div class="about-highlights">
-            <div class="highlight-item"><i class="fa-solid fa-check"></i> 450+ Completed Homes</div>
-            <div class="highlight-item"><i class="fa-solid fa-check"></i> Zero Hidden Charges</div>
-            <div class="highlight-item"><i class="fa-solid fa-check"></i> 100% Sun & Kiln Burnt Bricks</div>
-            <div class="highlight-item"><i class="fa-solid fa-check"></i> 10-Year Guarantee Certificate</div>
+          <div class="heritage-checklist">
+            <div class="heritage-check-item">
+              <i class="fa-solid fa-check"></i>
+              <span>100% Genuine Materials</span>
+            </div>
+            <div class="heritage-check-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Direct On-Site Supervision</span>
+            </div>
+            <div class="heritage-check-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Traditional Courtyard Experts</span>
+            </div>
+            <div class="heritage-check-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Customized Interior Packages</span>
+            </div>
           </div>
         </div>
       </div>
@@ -649,6 +695,13 @@
           </div>
           <p>Rooted in village heritage, built on decades of trust and craftsmanship. Crafting homes brick by brick with
             honesty and architectural strength.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@ppbuildersinteriors" target="_blank" rel="noopener noreferrer" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="social-btn wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
 
         <div class="footer-col">
@@ -726,7 +779,7 @@
 
   <!-- Floating WhatsApp & Scroll Up Buttons -->
   <div class="floating-actions">
-    <a href="https://wa.me/919999999999?text=Hello%20PP%20Builders,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+    <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services"
       target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
     </a>

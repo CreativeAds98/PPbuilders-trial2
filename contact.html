@@ -14,6 +14,13 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
   <style>
     /* ── PAGE BANNER ─────────────────────────────────── */
     .page-banner {
@@ -74,7 +81,10 @@
 
     /* ── QUICK CONTACT STRIP ─────────────────────────── */
     .quick-strip {
-      background: var(--terracotta-dark);
+      background: #FFFFFF;
+      border-top: 3px solid var(--primary-brick);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
       padding: 28px 0;
     }
 
@@ -102,38 +112,40 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: var(--bg-light-brick);
+      border: 1.5px solid var(--border-brick);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 20px;
-      color: var(--accent-gold);
+      color: var(--primary-brick);
       flex-shrink: 0;
       transition: var(--transition);
     }
 
     .quick-item:hover .quick-icon {
-      background: rgba(255, 255, 255, 0.2);
+      background: var(--primary-brick);
+      color: #FFFFFF;
+      transform: scale(1.08);
     }
 
     .quick-text strong {
       display: block;
       font-size: 15px;
       font-weight: 700;
-      color: #FFF;
+      color: var(--warm-heading);
       margin-bottom: 2px;
     }
 
     .quick-text span {
       font-size: 12px;
-      color: #C4B5AA;
+      color: var(--text-muted);
     }
 
     .quick-divider {
       width: 1px;
       height: 50px;
-      background: rgba(255, 255, 255, 0.12);
+      background: var(--border-subtle);
     }
 
     /* ── MAIN CONTACT SECTION ────────────────────────── */
@@ -475,7 +487,9 @@
 
     /* ── EMERGENCY BOX ───────────────────────────────── */
     .emergency-box {
-      background: linear-gradient(135deg, var(--terracotta-dark), var(--terracotta-deep));
+      background: linear-gradient(135deg, #FFF8F4 0%, #FAF1E8 100%);
+      border-top: 2px solid var(--border-brick);
+      border-bottom: 2px solid var(--border-brick);
       padding: 50px 0;
       text-align: center;
       margin-top: 0;
@@ -488,7 +502,7 @@
 
     .emergency-inner i.big {
       font-size: 48px;
-      color: var(--accent-gold);
+      color: var(--primary-brick);
       display: block;
       margin-bottom: 16px;
     }
@@ -497,13 +511,13 @@
       font-family: var(--font-serif);
       font-size: 26px;
       font-weight: 800;
-      color: #FFF;
+      color: var(--warm-heading);
       margin-bottom: 10px;
     }
 
     .emergency-inner p {
       font-size: 15px;
-      color: #C4B5AA;
+      color: var(--text-muted);
       margin-bottom: 22px;
     }
 
@@ -511,23 +525,27 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: transparent;
+      background: var(--primary-brick);
       color: #FFF;
       font-family: var(--font-sans);
       font-size: 13px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
-      border: 2px solid rgba(255, 255, 255, 0.5);
+      border: 1.5px solid var(--primary-brick);
       border-radius: 6px;
       padding: 13px 28px;
       text-decoration: none;
       transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(224, 83, 38, 0.25);
     }
 
     .btn-emergency:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.85);
+      background: var(--primary-dark-brick);
+      border-color: var(--primary-dark-brick);
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(224, 83, 38, 0.35);
     }
 
     /* ── RESPONSIVE ──────────────────────────────────── */
@@ -692,7 +710,7 @@
 
         <div class="quick-divider"></div>
 
-        <a href="https://wa.me/919876543210" target="_blank" class="quick-item">
+        <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" class="quick-item">
           <div class="quick-icon"><i class="fa-brands fa-whatsapp"></i></div>
           <div class="quick-text">
             <strong>WhatsApp Us</strong>
@@ -872,11 +890,11 @@
             <div class="info-card-body">
               See daily construction updates, completed projects, and interior work on our social channels.
               <div class="social-links">
-                <a href="#" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://wa.me/919876543210" class="social-btn wa" aria-label="WhatsApp"><i
-                    class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@ppbuildersinteriors" target="_blank" rel="noopener noreferrer" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="social-btn wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
@@ -916,7 +934,7 @@
         <h3>Need to Reach Us About an Ongoing Project?</h3>
         <p>Our site supervisors and engineers are reachable 7 days a week for all active construction projects —
           progress queries, material queries, or any urgent concerns.</p>
-        <a href="tel:+919876543210" class="btn-emergency">
+        <a href="tel:+917667893130" class="btn-emergency">
           <i class="fa-solid fa-phone"></i> CALL EMERGENCY LINE
         </a>
       </div>
@@ -934,6 +952,13 @@
             <img src="assets/logo.png" alt="PP Builders & Interiors Footer Logo" style="height:95px; width:auto;">
           </div>
           <p>Rooted in village heritage, built on decades of trust and craftsmanship.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@ppbuildersinteriors" target="_blank" rel="noopener noreferrer" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="social-btn wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
@@ -998,8 +1023,8 @@
 
   <!-- Floating WhatsApp & Scroll Up Buttons -->
   <div class="floating-actions">
-    <a href="https://wa.me/919999999999?text=Hello%20PP%20Builders,%20I%20would%20like%20to%20inquire%20about%20your%20services"
-      target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+      target="_blank" rel="noopener noreferrer" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
     <button id="scrollTopBtn" class="float-btn scroll-top-btn" aria-label="Scroll to top" title="Scroll to Top">

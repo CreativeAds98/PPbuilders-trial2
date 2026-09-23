@@ -14,6 +14,13 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
   <style>
     /* ── PAGE BANNER ──────────────────────────────── */
     .page-banner {
@@ -74,7 +81,10 @@
 
     /* ── RATING OVERVIEW STRIP ────────────────────── */
     .rating-strip {
-      background: var(--terracotta-dark);
+      background: #FFFFFF;
+      border-top: 3px solid var(--primary-brick);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
       padding: 28px 0;
     }
 
@@ -88,14 +98,14 @@
 
     .rating-col {
       text-align: center;
-      color: #FFF;
+      color: var(--text-main);
     }
 
     .rating-col .big {
       font-family: var(--font-serif);
       font-size: 34px;
       font-weight: 800;
-      color: var(--accent-gold);
+      color: var(--primary-brick);
       line-height: 1;
     }
 
@@ -110,13 +120,13 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #C4B5AA;
+      color: var(--text-muted);
     }
 
     .rating-divider {
       width: 1px;
       height: 50px;
-      background: rgba(255, 255, 255, 0.12);
+      background: var(--border-subtle);
     }
 
     /* ── FEATURED TESTIMONIAL ────────────────────── */
@@ -126,7 +136,10 @@
     }
 
     .featured-card {
-      background: linear-gradient(135deg, var(--terracotta-dark) 0%, var(--terracotta-deep) 100%);
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-brick);
+      border-top: 4px solid var(--primary-brick);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
       border-radius: var(--radius-lg);
       padding: 52px 56px;
       position: relative;
@@ -143,7 +156,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(224, 83, 38, 0.04);
     }
 
     .featured-card::after {
@@ -154,13 +167,13 @@
       width: 260px;
       height: 260px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(245, 158, 11, 0.03);
     }
 
     .quote-mark {
       font-size: 90px;
-      color: var(--accent-gold);
-      opacity: 0.25;
+      color: var(--primary-brick);
+      opacity: 0.12;
       font-family: Georgia, serif;
       line-height: 1;
       position: absolute;
@@ -172,7 +185,7 @@
       font-family: var(--font-serif);
       font-size: 21px;
       font-style: italic;
-      color: #FAF0E8;
+      color: var(--warm-heading);
       line-height: 1.7;
       margin-bottom: 28px;
       position: relative;
@@ -192,7 +205,7 @@
       width: 54px;
       height: 54px;
       border-radius: 50%;
-      background: var(--accent-gold);
+      background: var(--primary-brick);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -201,19 +214,20 @@
       font-weight: 800;
       color: #FFF;
       flex-shrink: 0;
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 4px 12px rgba(224, 83, 38, 0.25);
     }
 
     .featured-author h5 {
       font-family: var(--font-serif);
       font-size: 17px;
       font-weight: 800;
-      color: #FFF;
+      color: var(--warm-heading);
     }
 
     .featured-author p {
       font-size: 13px;
-      color: #C4B5AA;
+      color: var(--text-muted);
       margin-top: 2px;
     }
 
@@ -810,7 +824,7 @@
             handled permits, materials, and workers professionally."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#8C2F15;">SM</div>
+            <div class="t-avatar" style="background:#E05326;">SM</div>
             <div class="t-author-info">
               <h6>S. Murugesan</h6>
               <p>1,800 sq.ft Home · Erode · 2024</p>
@@ -831,7 +845,7 @@
             neighbours who used hollow blocks. Worth every paisa."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#6F2108;">LK</div>
+            <div class="t-avatar" style="background:#F59E0B;">LK</div>
             <div class="t-author-info">
               <h6>Lakshmi Devi K.</h6>
               <p>2,200 sq.ft Residence · Salem · 2023</p>
@@ -852,7 +866,7 @@
             professional construction experience he's seen in 40 years."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#A83A1C;">PA</div>
+            <div class="t-avatar" style="background:#2563EB;">PA</div>
             <div class="t-author-info">
               <h6>P. Annamalai</h6>
               <p>3,000 sq.ft Estate · Namakkal · 2022</p>
@@ -873,7 +887,7 @@
             felt like I was missing anything. Absolutely trustworthy."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#3D2314;">VR</div>
+            <div class="t-avatar" style="background:#10B981;">VR</div>
             <div class="t-author-info">
               <h6>Vijayalakshmi R.</h6>
               <p>1,600 sq.ft Home · Tiruppur · 2024</p>
@@ -894,7 +908,7 @@
             The blend of old character with new strength is exactly what we wanted."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#5C3A1E;">TS</div>
+            <div class="t-avatar" style="background:#8B5CF6;">TS</div>
             <div class="t-author-info">
               <h6>T. Soundararajan</h6>
               <p>Ancestral Renovation · Karur · 2023</p>
@@ -915,7 +929,7 @@
             guest who visits asks who built it."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#8C2F15;">MS</div>
+            <div class="t-avatar" style="background:#EC4899;">MS</div>
             <div class="t-author-info">
               <h6>Mahalakshmi S.</h6>
               <p>Interior Works · Coimbatore · 2024</p>
@@ -936,7 +950,7 @@
             hill-zone construction. Our home is rock-solid and beautifully finished."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#4A2A18;">GB</div>
+            <div class="t-avatar" style="background:#06B6D4;">GB</div>
             <div class="t-author-info">
               <h6>G. Balamurugan</h6>
               <p>2,600 sq.ft Villa · Ooty · 2022</p>
@@ -957,7 +971,7 @@
             for a year with zero structural issues."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#1E3A5F;">RR</div>
+            <div class="t-avatar" style="background:#3B82F6;">RR</div>
             <div class="t-author-info">
               <h6>R. Rajendran</h6>
               <p>Commercial Block · Salem · 2023</p>
@@ -978,7 +992,7 @@
             construction. They built not just my house but my confidence."</p>
           <div class="t-divider"></div>
           <div class="t-author">
-            <div class="t-avatar" style="background:#6F2108;">KS</div>
+            <div class="t-avatar" style="background:#F97316;">KS</div>
             <div class="t-author-info">
               <h6>K. Subramaniam</h6>
               <p>1,400 sq.ft Home · Erode · 2024</p>
@@ -1105,9 +1119,16 @@
         <div class="footer-col">
           <div class="footer-logo-box" style="margin-bottom:16px;">
             <img src="assets/logo.png" alt="PP Builders & Interiors Footer Logo"
-              style="height:60px; width:auto; filter:brightness(0) invert(1);">
+              style="height:95px; width:auto;">
           </div>
           <p>Rooted in village heritage, built on decades of trust and craftsmanship.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@ppbuildersinteriors" target="_blank" rel="noopener noreferrer" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="social-btn wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
@@ -1172,8 +1193,8 @@
 
   <!-- Floating WhatsApp & Scroll Up Buttons -->
   <div class="floating-actions">
-    <a href="https://wa.me/919999999999?text=Hello%20PP%20Builders,%20I%20would%20like%20to%20inquire%20about%20your%20services"
-      target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+      target="_blank" rel="noopener noreferrer" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
     <button id="scrollTopBtn" class="float-btn scroll-top-btn" aria-label="Scroll to top" title="Scroll to Top">

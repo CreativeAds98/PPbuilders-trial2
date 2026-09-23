@@ -21,6 +21,12 @@
   <!-- Shared Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
   <style>
     /* =====================================================
        PAGE BANNER (shared inner page hero)
@@ -89,7 +95,10 @@
        QUICK-STATS STRIP
        ===================================================== */
     .stats-strip {
-      background: var(--terracotta-dark);
+      background: #FFFFFF;
+      border-top: 3px solid var(--primary-brick);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
       padding: 26px 0;
     }
 
@@ -103,14 +112,14 @@
 
     .strip-stat {
       text-align: center;
-      color: #FFF;
+      color: var(--text-main);
     }
 
     .strip-stat .num {
       font-family: var(--font-serif);
       font-size: 32px;
       font-weight: 800;
-      color: var(--accent-gold);
+      color: var(--primary-brick);
       line-height: 1;
     }
 
@@ -118,14 +127,14 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #D6C7BC;
+      color: var(--text-muted);
       margin-top: 4px;
     }
 
     .strip-divider {
       width: 1px;
       height: 42px;
-      background: rgba(255, 255, 255, 0.15);
+      background: var(--border-subtle);
     }
 
     /* =====================================================
@@ -395,21 +404,16 @@
     }
 
     /* =====================================================
-       GOLDEN CTA BANNER
+       LIGHT CTA BANNER
        ===================================================== */
     .cta-banner {
-      background: linear-gradient(135deg, var(--terracotta-dark) 0%, var(--terracotta-deep) 100%);
+      background: linear-gradient(135deg, #FFF8F4 0%, #FAF1E8 100%);
+      border-top: 2px solid var(--border-brick);
+      border-bottom: 2px solid var(--border-brick);
       padding: 70px 0;
       text-align: center;
       position: relative;
       overflow: hidden;
-    }
-
-    .cta-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
 
     .cta-banner-inner {
@@ -421,13 +425,13 @@
       font-family: var(--font-serif);
       font-size: 36px;
       font-weight: 800;
-      color: #FFF;
+      color: var(--warm-heading);
       margin-bottom: 14px;
     }
 
     .cta-banner p {
       font-size: 16px;
-      color: #D6C7BC;
+      color: var(--text-muted);
       max-width: 520px;
       margin: 0 auto 28px;
     }
@@ -444,7 +448,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--accent-gold);
+      background: var(--primary-brick);
       color: #FFF;
       font-size: 13px;
       font-weight: 800;
@@ -456,35 +460,38 @@
       cursor: pointer;
       transition: var(--transition);
       text-decoration: none;
+      box-shadow: 0 4px 14px rgba(224, 83, 38, 0.25);
     }
 
     .btn-gold:hover {
-      background: #C45D1E;
+      background: var(--primary-dark-brick);
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 20px rgba(224, 83, 38, 0.35);
     }
 
     .btn-outline-white {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: transparent;
-      color: #FFF;
+      background: #FFFFFF;
+      color: var(--primary-brick);
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-      border: 2px solid rgba(255, 255, 255, 0.4);
+      border: 1.5px solid var(--primary-brick);
       border-radius: 6px;
       padding: 13px 26px;
       cursor: pointer;
       transition: var(--transition);
       text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
     }
 
     .btn-outline-white:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.7);
+      background: var(--primary-brick);
+      color: #FFF;
+      transform: translateY(-2px);
     }
 
     /* =====================================================
@@ -1143,6 +1150,13 @@
           </div>
           <p>Rooted in village heritage, built on decades of trust and craftsmanship. Crafting homes brick by brick with
             honesty and architectural strength.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@ppbuildersinteriors" target="_blank" rel="noopener noreferrer" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="social-btn wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/ppbuildersinteriors/" target="_blank" rel="noopener noreferrer" class="social-btn in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
 
         <div class="footer-col">
@@ -1216,6 +1230,17 @@
         </button>
       </form>
     </div>
+  </div>
+
+  <!-- Floating WhatsApp & Scroll Up Buttons -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+      target="_blank" rel="noopener noreferrer" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="scrollTopBtn" class="float-btn scroll-top-btn" aria-label="Scroll to top" title="Scroll to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </div>
 
   <script src="script.js"></script>
