@@ -256,39 +256,242 @@
       transform: translateX(4px);
     }
 
-    /* Founder Message Box */
-    .founder-box {
-      background: linear-gradient(135deg, #FFF9F5 0%, #FAF2EA 100%);
-      color: var(--text-main);
-      border: 1.5px solid var(--border-brick);
-      border-left: 6px solid var(--primary-brick);
-      border-radius: var(--radius-lg);
-      padding: 50px;
-      margin: 70px 0;
+    /* ==========================================================================
+    /* ==========================================================================
+       Founder Section - "A Vision Built on Trust" (Arched Editorial Layout)
+       ========================================================================== */
+    .founder-arch-section {
       position: relative;
+      padding: clamp(28px, 4vh, 48px) 0 clamp(32px, 4.5vh, 52px) 0;
+      background-color: #FFFDFB;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(224, 83, 38, 0.06);
+      scroll-margin-top: 80px;
     }
 
-    .founder-quote {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 24px;
-      color: var(--warm-heading);
+    /* Architectural Blueprint Grid & Wireframe Background */
+    .founder-blueprint-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
     }
 
-    .founder-info h5 {
-      font-family: var(--font-serif);
-      font-size: 20px;
+    .founder-blueprint-svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 1350px;
+    }
+
+    .founder-arch-container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    /* Two-Column Grid: Left Content + Right Arched Photo */
+    .founder-arch-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      align-items: center;
+      gap: clamp(32px, 4.5vw, 64px);
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    /* Left Column Content */
+    .founder-arch-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(14px, 2vh, 22px);
+    }
+
+    /* Eyebrow with Flanking Accent Lines */
+    .founder-arch-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .founder-arch-eyebrow .eyebrow-text {
+      font-family: var(--font-sans);
+      font-size: 11.5px;
       font-weight: 800;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
       color: var(--primary-brick);
+      white-space: nowrap;
     }
 
-    .founder-info p {
+    .founder-arch-eyebrow .eyebrow-line {
+      height: 1.5px;
+      background-color: var(--primary-brick);
+      opacity: 0.65;
+      width: 38px;
+    }
+
+    /* Main Serif Headline */
+    .founder-arch-title {
+      font-family: var(--font-serif);
+      font-size: clamp(34px, 3.4vw, 50px);
+      font-weight: 800;
+      color: var(--warm-heading);
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+      margin: 0;
+    }
+
+    /* Subtitle Commitment Lead */
+    .founder-arch-lead {
+      font-size: clamp(14.5px, 1.15vw, 16px);
+      line-height: 1.55;
+      color: #4A5568;
+      font-weight: 500;
+      max-width: 460px;
+      margin: 0;
+    }
+
+    /* Quote Block */
+    .founder-arch-quote {
+      display: flex;
+      align-items: stretch;
+      gap: 14px;
+      margin: 2px 0;
+    }
+
+    .arch-quote-icon {
+      flex-shrink: 0;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 3px;
+    }
+
+    .arch-quote-divider {
+      width: 2px;
+      background-color: var(--primary-brick);
+      opacity: 0.75;
+      flex-shrink: 0;
+      border-radius: 2px;
+    }
+
+    .arch-quote-text {
+      font-family: var(--font-serif);
+      font-size: clamp(17.5px, 1.55vw, 22px);
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--warm-heading);
+      margin: 0;
+    }
+
+    /* Founder Credentials */
+    .founder-arch-credentials {
+      margin-top: 2px;
+    }
+
+    .arch-founder-name {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--warm-heading);
+      letter-spacing: -0.2px;
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+
+    .arch-founder-role {
+      display: block;
       font-size: 13px;
-      color: var(--text-muted);
+      font-weight: 600;
+      color: #718096;
+      letter-spacing: 0.2px;
+    }
+
+    /* Outlined Rectangular Button */
+    .founder-arch-action {
+      padding-top: 4px;
+    }
+
+    .btn-arch-story {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1.5px solid var(--primary-brick);
+      background: transparent;
+      color: var(--primary-brick);
+      padding: 10px 24px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      width: fit-content;
+    }
+
+    .btn-arch-story i {
+      transition: transform 0.3s ease;
+      font-size: 13px;
+    }
+
+    .btn-arch-story:hover {
+      background-color: var(--primary-brick);
+      color: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(224, 83, 38, 0.25);
+    }
+
+    .btn-arch-story:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Right Column: Arched Founder Photo Frame */
+    .founder-arch-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .founder-arch-frame {
+      position: relative;
+      width: 100%;
+      max-width: 460px;
+      height: clamp(380px, 56vh, 480px);
+      /* Semicircular top arch with flat bottom */
+      border-top-left-radius: 230px;
+      border-top-right-radius: 230px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      /* Crisp terracotta arch border matching the mockup */
+      border: 2.5px solid var(--primary-brick);
+      overflow: hidden;
+      box-shadow: 0 16px 38px -12px rgba(45, 30, 20, 0.12);
+      background-color: #1A1F26;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .founder-arch-frame:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 48px -10px rgba(224, 83, 38, 0.18);
+    }
+
+    .founder-arch-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .founder-arch-frame:hover .founder-arch-img {
+      transform: scale(1.03);
     }
 
     /* Craftsmanship Features */
@@ -348,8 +551,88 @@
         font-size: 36px;
       }
 
-      .founder-box {
-        padding: 30px;
+      /* Founder Section Tablet Tweaks */
+      .founder-vision-section {
+        padding: 35px 0 40px 0;
+      }
+
+      .founder-title {
+        font-size: 30px;
+      }
+
+      .founder-arch-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .founder-arch-content {
+        align-items: center;
+        text-align: center;
+      }
+
+      .founder-arch-quote {
+        justify-content: center;
+      }
+
+      .founder-arch-lead {
+        max-width: 520px;
+      }
+
+      .founder-arch-frame {
+        height: 400px;
+        max-width: 360px;
+        border-top-left-radius: 180px;
+        border-top-right-radius: 180px;
+      }
+    }
+
+    /* Screen-Height Fitting for Laptop Displays (e.g. 1366x768 / Viewport height <= 720px) */
+    @media (max-height: 720px) and (min-width: 993px) {
+      .founder-arch-section {
+        padding: 16px 0 20px 0;
+      }
+
+      .founder-arch-grid {
+        gap: 36px;
+      }
+
+      .founder-arch-content {
+        gap: 12px;
+      }
+
+      .founder-arch-title {
+        font-size: 36px;
+      }
+
+      .founder-arch-lead {
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .arch-quote-text {
+        font-size: 17.5px;
+        line-height: 1.3;
+      }
+
+      .arch-founder-name {
+        font-size: 17px;
+        margin-bottom: 1px;
+      }
+
+      .arch-founder-role {
+        font-size: 12px;
+      }
+
+      .btn-arch-story {
+        padding: 8px 22px;
+        font-size: 11px;
+      }
+
+      .founder-arch-frame {
+        height: 380px;
+        max-width: 380px;
+        border-top-left-radius: 190px;
+        border-top-right-radius: 190px;
       }
     }
 
@@ -360,6 +643,29 @@
 
       .page-title {
         font-size: 28px;
+      }
+
+      .founder-arch-section {
+        padding: 35px 0 40px 0;
+      }
+
+      .founder-arch-title {
+        font-size: 30px;
+      }
+
+      .founder-arch-lead {
+        font-size: 14px;
+      }
+
+      .arch-quote-text {
+        font-size: 16.5px;
+      }
+
+      .founder-arch-frame {
+        height: 340px;
+        max-width: 300px;
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
       }
     }
   </style>
@@ -475,7 +781,7 @@
   <!-- ==========================================================================
        3. ABOUT STORY & HERITAGE
        ========================================================================== -->
-  <section class="about-section">
+  <section class="about-section" id="about-story">
     <div class="container">
       <div class="about-grid">
         <!-- Collage Art matching reference layout -->
@@ -616,17 +922,113 @@
   </section>
 
   <!-- ==========================================================================
-       5. FOUNDER'S MESSAGE
+       5. MEET THE FOUNDER - A VISION BUILT ON TRUST
        ========================================================================== -->
-  <section class="container">
-    <div class="founder-box">
-      <div class="founder-quote">
-        "When a family entrusts us with building their home, they are giving us their hard-earned life savings and
-        dreams. We consider every brick laid as if it were for our own ancestral home."
-      </div>
-      <div class="founder-info">
-        <h5>P. Palanisamy</h5>
-        <p>Founder & Managing Director, PP Builders & Interiors</p>
+  <section class="founder-arch-section" id="founder">
+    <!-- Architectural Blueprint Grid & Wireframe Elevation Background -->
+    <div class="founder-blueprint-bg" aria-hidden="true">
+      <svg class="founder-blueprint-svg" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMin meet">
+        <!-- Construction Grid Lines -->
+        <line x1="50" y1="60" x2="1200" y2="60" stroke="#E05326" stroke-width="0.8" opacity="0.18" />
+        <line x1="50" y1="280" x2="1200" y2="280" stroke="#E05326" stroke-width="0.8" opacity="0.1" stroke-dasharray="4 4" />
+        <line x1="50" y1="520" x2="1200" y2="520" stroke="#E05326" stroke-width="0.8" opacity="0.12" />
+        
+        <!-- Right Alignment Guide with Orange Accent Dot (matching mockup) -->
+        <line x1="1080" y1="36" x2="1080" y2="620" stroke="#E05326" stroke-width="1" opacity="0.32" />
+        <circle cx="1080" cy="36" r="4" fill="#E05326" opacity="0.85" />
+        
+        <!-- Axonometric Architectural House Wireframe Sketch (Right Side) -->
+        <g stroke="#E05326" stroke-width="1.1" opacity="0.3" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="1020,130 1120,70 1210,105 1110,170" />
+          <polygon points="1020,130 1110,170 1110,290 1020,245" />
+          <polygon points="1110,170 1210,105 1210,220 1110,290" />
+          
+          <polygon points="1000,90 1100,30 1190,65 1090,130" />
+          <line x1="1000" y1="90" x2="1000" y2="100" />
+          <line x1="1090" y1="130" x2="1090" y2="140" />
+          <line x1="1190" y1="65" x2="1190" y2="75" />
+          <polygon points="1000,100 1090,140 1190,75 1100,40" />
+
+          <line x1="1020" y1="130" x2="1020" y2="245" />
+          <line x1="1060" y1="145" x2="1060" y2="260" />
+
+          <line x1="1130" y1="160" x2="1200" y2="120" />
+          <line x1="1130" y1="175" x2="1200" y2="135" />
+
+          <line x1="1030" y1="75" x2="1070" y2="55" />
+          <line x1="1050" y1="85" x2="1090" y2="65" />
+          <line x1="1070" y1="95" x2="1110" y2="75" />
+        </g>
+
+        <!-- Bottom Left/Center Blueprint Ground Wireframe (matching mockup) -->
+        <g stroke="#E05326" stroke-width="0.9" opacity="0.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="420" y1="460" x2="580" y2="380" />
+          <line x1="580" y1="380" x2="680" y2="420" />
+          <line x1="420" y1="460" x2="420" y2="530" />
+          <line x1="420" y1="530" x2="580" y2="450" />
+          <line x1="580" y1="450" x2="680" y2="490" />
+          <line x1="680" y1="420" x2="680" y2="490" />
+          <line x1="580" y1="380" x2="580" y2="450" />
+          <line x1="380" y1="550" x2="720" y2="520" stroke-dasharray="3 3" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="container founder-arch-container">
+      <div class="founder-arch-grid">
+        <!-- Left Content Column -->
+        <div class="founder-arch-content">
+          <!-- Eyebrow -->
+          <div class="founder-arch-eyebrow">
+            <span class="eyebrow-line left"></span>
+            <span class="eyebrow-text">MEET THE FOUNDER</span>
+            <span class="eyebrow-line right"></span>
+          </div>
+
+          <!-- Main Headline -->
+          <h2 class="founder-arch-title">
+            A vision built<br>on trust
+          </h2>
+
+          <!-- Subtitle / Commitment Lead -->
+          <p class="founder-arch-lead">
+            A personal commitment to honest construction, thoughtful design, and homes built to last.
+          </p>
+
+          <!-- Quote Block -->
+          <div class="founder-arch-quote">
+            <div class="arch-quote-icon">
+              <svg width="32" height="26" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.4 0C5.1 0 0 5.1 0 11.4C0 17.7 5.1 22.8 11.4 22.8C12.6 22.8 13.8 22.6 14.9 22.2C13.4 27.2 8.9 30.8 3.5 32L2.3 32.3L3.3 33.6L4.1 33.5C12.9 31.4 19.3 23.7 19.3 14.1C19.3 6.3 13 0 11.4 0ZM32.1 0C25.8 0 20.7 5.1 20.7 11.4C20.7 17.7 25.8 22.8 32.1 22.8C33.3 22.8 34.5 22.6 35.6 22.2C34.1 27.2 29.6 30.8 24.2 32L23 32.3L24 33.6L24.8 33.5C33.6 31.4 40 23.7 40 14.1C40 6.3 33.7 0 32.1 0Z" fill="#E05326"/>
+              </svg>
+            </div>
+            <div class="arch-quote-divider"></div>
+            <blockquote class="arch-quote-text">
+              Every home we build should earn<br class="quote-br"> the trust placed in us.
+            </blockquote>
+          </div>
+
+          <!-- Founder Credentials -->
+          <div class="founder-arch-credentials">
+            <h4 class="arch-founder-name">P. Palanisamy</h4>
+            <span class="arch-founder-role">Founder &amp; Managing Director</span>
+          </div>
+
+          <!-- Outlined CTA Button (Matching Mockup) -->
+          <div class="founder-arch-action">
+            <a href="#about-story" class="btn-arch-story">
+              <span>READ OUR STORY</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Arched Founder Photo Frame -->
+        <div class="founder-arch-visual">
+          <div class="founder-arch-frame">
+            <img src="assets/founder.jpg" alt="P. Palanisamy - Founder &amp; Managing Director, PP Builders &amp; Interiors" class="founder-arch-img" loading="lazy">
+          </div>
+        </div>
       </div>
     </div>
   </section>
