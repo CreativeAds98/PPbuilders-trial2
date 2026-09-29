@@ -257,13 +257,12 @@
     }
 
     /* ==========================================================================
-    /* ==========================================================================
-       Founder Section - "A Vision Built on Trust" (Arched Editorial Layout)
+       5. Founder Section - "A Vision Built on Trust" (Architectural Editorial Redesign)
        ========================================================================== */
     .founder-arch-section {
       position: relative;
-      padding: clamp(28px, 4vh, 48px) 0 clamp(32px, 4.5vh, 52px) 0;
-      background-color: #FFFDFB;
+      padding: clamp(52px, 7vh, 88px) 0 clamp(48px, 6.5vh, 80px) 0;
+      background-color: #FAF8F5;
       overflow: hidden;
       scroll-margin-top: 80px;
     }
@@ -286,212 +285,320 @@
       right: 0;
       width: 100%;
       height: 100%;
-      max-width: 1350px;
+      min-width: 1100px;
     }
 
     .founder-arch-container {
       position: relative;
       z-index: 2;
       width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
-    /* Two-Column Grid: Left Content + Right Arched Photo */
+    /* Two-Column Grid: Left Content + Right Arch Visual */
     .founder-arch-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
       align-items: center;
-      gap: clamp(32px, 4.5vw, 64px);
-      max-width: 1160px;
-      margin: 0 auto;
+      gap: clamp(20px, 3vw, 44px);
     }
 
     /* Left Column Content */
     .founder-arch-content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: clamp(14px, 2vh, 22px);
+      gap: 18px;
+      position: relative;
+      z-index: 5;
     }
 
-    /* Eyebrow with Flanking Accent Lines */
+    /* Eyebrow: — MEET THE FOUNDER — */
     .founder-arch-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .founder-arch-eyebrow .eyebrow-text {
       font-family: var(--font-sans);
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 800;
-      letter-spacing: 2.2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--primary-brick);
+      color: #C84B19;
       white-space: nowrap;
     }
 
     .founder-arch-eyebrow .eyebrow-line {
       height: 1.5px;
-      background-color: var(--primary-brick);
-      opacity: 0.65;
-      width: 38px;
+      background-color: #C84B19;
+      opacity: 0.75;
+      width: 44px;
     }
 
-    /* Main Serif Headline */
+    /* Headline: A vision built on trust */
     .founder-arch-title {
       font-family: var(--font-serif);
-      font-size: clamp(34px, 3.4vw, 50px);
+      font-size: clamp(38px, 4vw, 56px);
       font-weight: 800;
-      color: var(--warm-heading);
+      color: #14181F;
       line-height: 1.08;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.8px;
       margin: 0;
     }
 
-    /* Subtitle Commitment Lead */
+    /* Subtitle Lead */
     .founder-arch-lead {
-      font-size: clamp(14.5px, 1.15vw, 16px);
+      font-size: clamp(14.5px, 1.1vw, 16px);
       line-height: 1.55;
-      color: #4A5568;
+      color: #4A5360;
       font-weight: 500;
-      max-width: 460px;
+      max-width: 470px;
       margin: 0;
     }
 
-    /* Quote Block */
-    .founder-arch-quote {
-      display: flex;
+    /* 3 Pillars / Feature Badges */
+    .founder-pillars-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
-      gap: 14px;
-      margin: 2px 0;
+      max-width: 460px;
+      margin: 2px 0 4px 0;
+      padding-top: 2px;
     }
 
-    .arch-quote-icon {
+    .founder-pillar-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 12px;
+      position: relative;
+    }
+
+    .founder-pillar-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background-color: rgba(200, 75, 25, 0.22);
+    }
+
+    .pillar-icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 8px;
+      color: #C84B19;
+    }
+
+    .pillar-icon-box svg {
+      width: 36px;
+      height: 36px;
+      stroke: #C84B19;
+      fill: none;
+      transition: transform 0.3s ease;
+    }
+
+    .founder-pillar-item:hover .pillar-icon-box svg {
+      transform: translateY(-2px);
+    }
+
+    .pillar-label {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      color: #161A20;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    /* Terracotta Quote Banner (Signature Element) */
+    .founder-quote-banner {
+      background: linear-gradient(135deg, #CF4E18 0%, #B83E10 100%);
+      border-radius: 3px;
+      padding: 22px 28px;
+      box-shadow: 0 14px 34px -4px rgba(184, 62, 16, 0.42);
+      position: relative;
+      z-index: 10;
+      margin: 4px 0 4px 0;
+      /* On desktop, extend into the visual column to overlap cleanly onto the photo */
+      width: calc(100% + 140px);
+      max-width: 680px;
+    }
+
+    .founder-quote-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .founder-quote-glyph {
       flex-shrink: 0;
       display: flex;
-      align-items: flex-start;
-      padding-top: 3px;
+      align-items: center;
+      justify-content: center;
     }
 
-    .arch-quote-divider {
-      width: 2px;
-      background-color: var(--primary-brick);
-      opacity: 0.75;
+    .founder-quote-glyph svg {
+      width: 34px;
+      height: 28px;
+      fill: #FFFFFF;
+    }
+
+    .founder-quote-line {
+      width: 1.5px;
+      height: 42px;
+      background-color: rgba(255, 255, 255, 0.5);
       flex-shrink: 0;
-      border-radius: 2px;
     }
 
-    .arch-quote-text {
+    .founder-quote-phrase {
       font-family: var(--font-serif);
-      font-size: clamp(17.5px, 1.55vw, 22px);
+      font-size: clamp(17.5px, 1.55vw, 21.5px);
       font-style: italic;
       font-weight: 600;
+      color: #FFFFFF;
       line-height: 1.35;
-      color: var(--warm-heading);
       margin: 0;
     }
 
-    /* Founder Credentials */
-    .founder-arch-credentials {
+    /* Founder Credentials & Action Footer */
+    .founder-footer-block {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
       margin-top: 2px;
     }
 
-    .arch-founder-name {
-      font-family: var(--font-serif);
-      font-size: 19px;
+    .founder-person-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .founder-person-name {
+      font-family: var(--font-sans);
+      font-size: 21px;
       font-weight: 800;
-      color: var(--warm-heading);
+      color: #14191F;
       letter-spacing: -0.2px;
-      margin-bottom: 2px;
+      margin: 0;
       line-height: 1.2;
     }
 
-    .arch-founder-role {
-      display: block;
-      font-size: 13px;
+    .founder-person-role {
+      font-size: 13.5px;
       font-weight: 600;
       color: #718096;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.1px;
+      margin: 0;
     }
 
-    /* Outlined Rectangular Button */
-    .founder-arch-action {
-      padding-top: 4px;
-    }
-
-    .btn-arch-story {
+    /* Solid Terracotta Button */
+    .btn-founder-cta {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      border: 1.5px solid var(--primary-brick);
-      background: transparent;
-      color: var(--primary-brick);
-      padding: 10px 24px;
+      gap: 12px;
+      background-color: #D84315;
+      color: #FFFFFF !important;
+      padding: 12px 28px;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 1.6px;
       text-transform: uppercase;
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border-radius: 2px;
       width: fit-content;
+      box-shadow: 0 8px 20px -3px rgba(216, 67, 21, 0.35);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      text-decoration: none;
     }
 
-    .btn-arch-story i {
+    .btn-founder-cta i {
       transition: transform 0.3s ease;
       font-size: 13px;
     }
 
-    .btn-arch-story:hover {
-      background-color: var(--primary-brick);
+    .btn-founder-cta:hover {
+      background-color: #BF360C;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px -4px rgba(216, 67, 21, 0.45);
       color: #FFFFFF;
-      box-shadow: 0 6px 18px rgba(224, 83, 38, 0.25);
     }
 
-    .btn-arch-story:hover i {
+    .btn-founder-cta:hover i {
       transform: translateX(4px);
     }
 
-    /* Right Column: Arched Founder Photo Frame */
+    /* Right Column: Arched Composition & Architectural Geometry */
     .founder-arch-visual {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
+      width: 100%;
+      min-height: 560px;
     }
 
+    /* Outer Arched Silhouette with Peach Tint */
+    .founder-outer-arch {
+      position: absolute;
+      top: -24px;
+      left: -16px;
+      right: -16px;
+      bottom: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      border-top-left-radius: 255px;
+      border-top-right-radius: 255px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border: 1.5px solid rgba(200, 75, 25, 0.45);
+      background: linear-gradient(135deg, rgba(224, 110, 60, 0.15) 0%, rgba(224, 110, 60, 0.03) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Main Photo Arch Frame */
     .founder-arch-frame {
       position: relative;
+      z-index: 2;
       width: 100%;
       max-width: 460px;
-      height: clamp(380px, 56vh, 480px);
-      /* Semicircular top arch with flat bottom */
+      height: clamp(520px, 66vh, 580px);
       border-top-left-radius: 230px;
       border-top-right-radius: 230px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      /* Crisp terracotta arch border matching the mockup */
-      border: 2.5px solid var(--primary-brick);
+      border: 2.5px solid #C84B19;
       overflow: hidden;
-      box-shadow: 0 16px 38px -12px rgba(45, 30, 20, 0.12);
-      background-color: #1A1F26;
+      box-shadow: 0 20px 48px -10px rgba(45, 30, 20, 0.16);
+      background-color: #20252D;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
     .founder-arch-frame:hover {
       transform: translateY(-4px);
-      box-shadow: 0 22px 48px -10px rgba(224, 83, 38, 0.18);
+      box-shadow: 0 24px 56px -10px rgba(200, 75, 25, 0.25);
     }
 
     .founder-arch-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: center 8%;
       display: block;
       transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .founder-arch-frame:hover .founder-arch-img {
-      transform: scale(1.03);
+      transform: scale(1.025);
     }
 
     /* Craftsmanship Features */
@@ -552,17 +659,9 @@
       }
 
       /* Founder Section Tablet Tweaks */
-      .founder-vision-section {
-        padding: 35px 0 40px 0;
-      }
-
-      .founder-title {
-        font-size: 30px;
-      }
-
       .founder-arch-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 40px;
       }
 
       .founder-arch-content {
@@ -570,7 +669,7 @@
         text-align: center;
       }
 
-      .founder-arch-quote {
+      .founder-arch-eyebrow {
         justify-content: center;
       }
 
@@ -578,8 +677,32 @@
         max-width: 520px;
       }
 
+      .founder-pillars-row {
+        max-width: 440px;
+        margin: 6px auto;
+      }
+
+      .founder-quote-banner {
+        width: 100%;
+        max-width: 540px;
+        margin: 6px auto;
+      }
+
+      .founder-footer-block {
+        align-items: center;
+        text-align: center;
+      }
+
+      .founder-outer-arch {
+        display: none;
+      }
+
+      .founder-arch-visual {
+        min-height: auto;
+      }
+
       .founder-arch-frame {
-        height: 400px;
+        height: 420px;
         max-width: 360px;
         border-top-left-radius: 180px;
         border-top-right-radius: 180px;
@@ -589,19 +712,19 @@
     /* Screen-Height Fitting for Laptop Displays (e.g. 1366x768 / Viewport height <= 720px) */
     @media (max-height: 720px) and (min-width: 993px) {
       .founder-arch-section {
-        padding: 16px 0 20px 0;
+        padding: 32px 0 36px 0;
       }
 
       .founder-arch-grid {
-        gap: 36px;
+        gap: 32px;
       }
 
       .founder-arch-content {
-        gap: 12px;
+        gap: 14px;
       }
 
       .founder-arch-title {
-        font-size: 36px;
+        font-size: 40px;
       }
 
       .founder-arch-lead {
@@ -609,27 +732,16 @@
         line-height: 1.45;
       }
 
-      .arch-quote-text {
-        font-size: 17.5px;
-        line-height: 1.3;
+      .founder-quote-banner {
+        padding: 16px 22px;
       }
 
-      .arch-founder-name {
-        font-size: 17px;
-        margin-bottom: 1px;
-      }
-
-      .arch-founder-role {
-        font-size: 12px;
-      }
-
-      .btn-arch-story {
-        padding: 8px 22px;
-        font-size: 11px;
+      .founder-quote-phrase {
+        font-size: 18px;
       }
 
       .founder-arch-frame {
-        height: 380px;
+        height: 420px;
         max-width: 380px;
         border-top-left-radius: 190px;
         border-top-right-radius: 190px;
@@ -646,26 +758,80 @@
       }
 
       .founder-arch-section {
-        padding: 35px 0 40px 0;
+        padding: 40px 0;
       }
 
       .founder-arch-title {
-        font-size: 30px;
+        font-size: 32px;
       }
 
       .founder-arch-lead {
         font-size: 14px;
       }
 
-      .arch-quote-text {
-        font-size: 16.5px;
+      .founder-pillars-row {
+        gap: 4px;
+        padding-top: 0;
+      }
+
+      .founder-pillar-item {
+        padding: 0 4px;
+      }
+
+      .pillar-icon-box {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 6px;
+      }
+
+      .pillar-icon-box svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .pillar-label {
+        font-size: 11.5px;
+      }
+
+      .founder-quote-banner {
+        padding: 16px 16px;
+      }
+
+      .founder-quote-inner {
+        gap: 12px;
+      }
+
+      .founder-quote-glyph svg {
+        width: 26px;
+        height: 22px;
+      }
+
+      .founder-quote-line {
+        height: 34px;
+      }
+
+      .founder-quote-phrase {
+        font-size: 16px;
+      }
+
+      .founder-person-name {
+        font-size: 19px;
+      }
+
+      .founder-person-role {
+        font-size: 12.5px;
+      }
+
+      .btn-founder-cta {
+        padding: 10px 24px;
+        font-size: 11.5px;
       }
 
       .founder-arch-frame {
         height: 340px;
-        max-width: 300px;
-        border-top-left-radius: 150px;
-        border-top-right-radius: 150px;
+        max-width: 290px;
+        border-top-left-radius: 145px;
+        border-top-right-radius: 145px;
       }
     }
   </style>
@@ -928,48 +1094,68 @@
     <!-- Architectural Blueprint Grid & Wireframe Elevation Background -->
     <div class="founder-blueprint-bg" aria-hidden="true">
       <svg class="founder-blueprint-svg" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMin meet">
-        <!-- Construction Grid Lines -->
-        <line x1="50" y1="60" x2="1200" y2="60" stroke="#E05326" stroke-width="0.8" opacity="0.18" />
-        <line x1="50" y1="280" x2="1200" y2="280" stroke="#E05326" stroke-width="0.8" opacity="0.1" stroke-dasharray="4 4" />
-        <line x1="50" y1="520" x2="1200" y2="520" stroke="#E05326" stroke-width="0.8" opacity="0.12" />
-        
-        <!-- Right Alignment Guide with Orange Accent Dot (matching mockup) -->
-        <line x1="1080" y1="36" x2="1080" y2="620" stroke="#E05326" stroke-width="1" opacity="0.32" />
-        <circle cx="1080" cy="36" r="4" fill="#E05326" opacity="0.85" />
-        
-        <!-- Axonometric Architectural House Wireframe Sketch (Right Side) -->
-        <g stroke="#E05326" stroke-width="1.1" opacity="0.3" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="1020,130 1120,70 1210,105 1110,170" />
-          <polygon points="1020,130 1110,170 1110,290 1020,245" />
-          <polygon points="1110,170 1210,105 1210,220 1110,290" />
-          
-          <polygon points="1000,90 1100,30 1190,65 1090,130" />
-          <line x1="1000" y1="90" x2="1000" y2="100" />
-          <line x1="1090" y1="130" x2="1090" y2="140" />
-          <line x1="1190" y1="65" x2="1190" y2="75" />
-          <polygon points="1000,100 1090,140 1190,75 1100,40" />
+        <!-- Construction Grid Guidelines -->
+        <line x1="40" y1="58" x2="1200" y2="58" stroke="#C84B19" stroke-width="0.8" opacity="0.2" />
+        <line x1="40" y1="310" x2="1200" y2="310" stroke="#C84B19" stroke-width="0.8" opacity="0.1" stroke-dasharray="4 4" />
+        <line x1="40" y1="520" x2="1200" y2="520" stroke="#C84B19" stroke-width="0.8" opacity="0.12" />
+        <line x1="570" y1="20" x2="570" y2="600" stroke="#C84B19" stroke-width="0.8" opacity="0.12" stroke-dasharray="3 3" />
 
-          <line x1="1020" y1="130" x2="1020" y2="245" />
-          <line x1="1060" y1="145" x2="1060" y2="260" />
+        <!-- Right Alignment Guide with Orange Accent Dot -->
+        <line x1="1080" y1="32" x2="1080" y2="620" stroke="#C84B19" stroke-width="1" opacity="0.35" />
+        <circle cx="1080" cy="46" r="4" fill="#C84B19" opacity="0.9" />
 
-          <line x1="1130" y1="160" x2="1200" y2="120" />
-          <line x1="1130" y1="175" x2="1200" y2="135" />
+        <!-- Axonometric 3D Architectural Elevation & Building Wireframe (Right Side) -->
+        <g stroke="#C84B19" stroke-width="1.1" opacity="0.38" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Top Isometric Roof / Upper Framework -->
+          <polygon points="1030,120 1120,65 1200,98 1110,155" />
+          <polygon points="1030,120 1110,155 1110,285 1030,240" />
+          <polygon points="1110,155 1200,98 1200,225 1110,285" />
 
-          <line x1="1030" y1="75" x2="1070" y2="55" />
-          <line x1="1050" y1="85" x2="1090" y2="65" />
-          <line x1="1070" y1="95" x2="1110" y2="75" />
+          <!-- Parapet and Corner Accents -->
+          <polygon points="1010,85 1100,32 1185,62 1095,120" />
+          <line x1="1010" y1="85" x2="1010" y2="95" />
+          <line x1="1095" y1="120" x2="1095" y2="130" />
+          <line x1="1185" y1="62" x2="1185" y2="72" />
+          <polygon points="1010,95 1095,130 1185,72 1100,42" />
+
+          <!-- Structural Columns & Vertical Mullions -->
+          <line x1="1030" y1="120" x2="1030" y2="380" />
+          <line x1="1070" y1="138" x2="1070" y2="440" />
+          <line x1="1110" y1="155" x2="1110" y2="520" />
+          <line x1="1155" y1="125" x2="1155" y2="480" />
+          <line x1="1200" y1="98" x2="1200" y2="460" />
+
+          <!-- Floor Slab Bands -->
+          <line x1="1030" y1="200" x2="1110" y2="235" />
+          <line x1="1110" y1="235" x2="1200" y2="180" />
+          <line x1="1030" y1="310" x2="1110" y2="345" />
+          <line x1="1110" y1="345" x2="1200" y2="290" />
+          <line x1="1070" y1="410" x2="1110" y2="430" />
+          <line x1="1110" y1="430" x2="1200" y2="380" />
+
+          <!-- Diagonal Bracing Wireframe -->
+          <line x1="1030" y1="70" x2="1070" y2="50" />
+          <line x1="1050" y1="80" x2="1090" y2="60" />
+          <line x1="1070" y1="90" x2="1110" y2="70" />
         </g>
 
-        <!-- Bottom Left/Center Blueprint Ground Wireframe (matching mockup) -->
-        <g stroke="#E05326" stroke-width="0.9" opacity="0.2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="420" y1="460" x2="580" y2="380" />
-          <line x1="580" y1="380" x2="680" y2="420" />
-          <line x1="420" y1="460" x2="420" y2="530" />
-          <line x1="420" y1="530" x2="580" y2="450" />
-          <line x1="580" y1="450" x2="680" y2="490" />
-          <line x1="680" y1="420" x2="680" y2="490" />
-          <line x1="580" y1="380" x2="580" y2="450" />
-          <line x1="380" y1="550" x2="720" y2="520" stroke-dasharray="3 3" />
+        <!-- Intersection Accent Circles / Nodes -->
+        <circle cx="1030" cy="120" r="3.5" fill="#C84B19" opacity="0.8" />
+        <circle cx="1110" cy="155" r="3.5" fill="#C84B19" opacity="0.8" />
+        <circle cx="1120" cy="65" r="3.5" fill="#C84B19" opacity="0.8" />
+        <circle cx="1200" cy="98" r="3.5" fill="#C84B19" opacity="0.8" />
+        <circle cx="1110" cy="285" r="3.5" fill="#C84B19" opacity="0.8" />
+
+        <!-- Bottom Perspective Wireframe Ground Grid -->
+        <g stroke="#C84B19" stroke-width="0.85" opacity="0.22" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="390" y1="480" x2="570" y2="395" />
+          <line x1="570" y1="395" x2="690" y2="440" />
+          <line x1="390" y1="480" x2="390" y2="560" />
+          <line x1="390" y1="560" x2="570" y2="475" />
+          <line x1="570" y1="475" x2="690" y2="520" />
+          <line x1="690" y1="440" x2="690" y2="520" />
+          <line x1="570" y1="395" x2="570" y2="475" />
+          <line x1="350" y1="580" x2="730" y2="550" stroke-dasharray="3 3" />
         </g>
       </svg>
     </div>
@@ -978,14 +1164,14 @@
       <div class="founder-arch-grid">
         <!-- Left Content Column -->
         <div class="founder-arch-content">
-          <!-- Eyebrow -->
+          <!-- Eyebrow: — MEET THE FOUNDER — -->
           <div class="founder-arch-eyebrow">
             <span class="eyebrow-line left"></span>
             <span class="eyebrow-text">MEET THE FOUNDER</span>
             <span class="eyebrow-line right"></span>
           </div>
 
-          <!-- Main Headline -->
+          <!-- Main Headline: A vision built on trust -->
           <h2 class="founder-arch-title">
             A vision built<br>on trust
           </h2>
@@ -995,36 +1181,83 @@
             A personal commitment to honest construction, thoughtful design, and homes built to last.
           </p>
 
-          <!-- Quote Block -->
-          <div class="founder-arch-quote">
-            <div class="arch-quote-icon">
-              <svg width="32" height="26" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.4 0C5.1 0 0 5.1 0 11.4C0 17.7 5.1 22.8 11.4 22.8C12.6 22.8 13.8 22.6 14.9 22.2C13.4 27.2 8.9 30.8 3.5 32L2.3 32.3L3.3 33.6L4.1 33.5C12.9 31.4 19.3 23.7 19.3 14.1C19.3 6.3 13 0 11.4 0ZM32.1 0C25.8 0 20.7 5.1 20.7 11.4C20.7 17.7 25.8 22.8 32.1 22.8C33.3 22.8 34.5 22.6 35.6 22.2C34.1 27.2 29.6 30.8 24.2 32L23 32.3L24 33.6L24.8 33.5C33.6 31.4 40 23.7 40 14.1C40 6.3 33.7 0 32.1 0Z" fill="#E05326"/>
-              </svg>
+          <!-- 3 Feature Pillars with Custom Line Icons -->
+          <div class="founder-pillars-row">
+            <!-- Pillar 1: Honest construction -->
+            <div class="founder-pillar-item">
+              <div class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 23C7 14.5 11.5 9 18 9C24.5 9 29 14.5 29 23"/>
+                  <path d="M15 9V6C15 5.5 15.5 5 16 5H20C20.5 5 21 5.5 21 6V9"/>
+                  <path d="M4 23H32C32.5 23 33 23.5 33 24V25C33 25.5 32.5 26 32 26H4C3.5 26 3 25.5 3 25V24C3 23.5 3.5 23 4 23Z"/>
+                </svg>
+              </div>
+              <p class="pillar-label">Honest<br>construction</p>
             </div>
-            <div class="arch-quote-divider"></div>
-            <blockquote class="arch-quote-text">
-              Every home we build should earn<br class="quote-br"> the trust placed in us.
-            </blockquote>
+
+            <!-- Pillar 2: Thoughtful design -->
+            <div class="founder-pillar-item">
+              <div class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="7" y="10" width="22" height="6" rx="1" transform="rotate(45 7 10)"/>
+                  <line x1="14" y1="13" x2="16" y2="15"/>
+                  <line x1="18" y1="17" x2="20" y2="19"/>
+                  <line x1="22" y1="21" x2="24" y2="23"/>
+                  <path d="M25 7L29 11L13 27L8 28L9 23L25 7Z"/>
+                  <line x1="22" y1="10" x2="26" y2="14"/>
+                </svg>
+              </div>
+              <p class="pillar-label">Thoughtful<br>design</p>
+            </div>
+
+            <!-- Pillar 3: Homes built to last -->
+            <div class="founder-pillar-item">
+              <div class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 16L18 7L30 16V29H6V16Z"/>
+                  <path d="M14 29V20H22V29"/>
+                  <path d="M23 7C23 7 28 6 30 10C30 14 26 15 26 15"/>
+                  <path d="M23 7C24.5 10 26 15 26 15"/>
+                </svg>
+              </div>
+              <p class="pillar-label">Homes<br>built to last</p>
+            </div>
           </div>
 
-          <!-- Founder Credentials -->
-          <div class="founder-arch-credentials">
-            <h4 class="arch-founder-name">P. Palanisamy</h4>
-            <span class="arch-founder-role">Founder &amp; Managing Director</span>
+          <!-- Terracotta Quote Banner (Signature Element) -->
+          <div class="founder-quote-banner">
+            <div class="founder-quote-inner">
+              <div class="founder-quote-glyph" aria-hidden="true">
+                <svg viewBox="0 0 34 28" fill="currentColor">
+                  <path d="M10.2 0C4.6 0 0 4.6 0 10.2C0 15.8 4.6 20.4 10.2 20.4C11.3 20.4 12.3 20.2 13.3 19.8C12 24.3 8 27.5 3.1 28.5L2 28.8L3 30L3.7 29.9C11.6 28 17.3 21.1 17.3 12.6C17.3 5.6 11.7 0 10.2 0ZM26.9 0C21.3 0 16.7 4.6 16.7 10.2C16.7 15.8 21.3 20.4 26.9 20.4C28 20.4 29 20.2 30 19.8C28.7 24.3 24.7 27.5 19.8 28.5L18.7 28.8L19.7 30L20.4 29.9C28.3 28 34 21.1 34 12.6C34 5.6 28.4 0 26.9 0Z"/>
+                </svg>
+              </div>
+              <div class="founder-quote-line" aria-hidden="true"></div>
+              <p class="founder-quote-phrase">Every home we build should earn the trust placed in us.</p>
+            </div>
           </div>
 
-          <!-- Outlined CTA Button (Matching Mockup) -->
-          <div class="founder-arch-action">
-            <a href="#about-story" class="btn-arch-story">
-              <span>READ OUR STORY</span>
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </a>
+          <!-- Founder Credentials & Action Button -->
+          <div class="founder-footer-block">
+            <div class="founder-person-meta">
+              <h3 class="founder-person-name">P. Palanisamy</h3>
+              <span class="founder-person-role">Founder &amp; Managing Director</span>
+            </div>
+            <div>
+              <a href="#about-story" class="btn-founder-cta">
+                <span>READ OUR STORY</span>
+                <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Arched Founder Photo Frame -->
+        <!-- Right Column: Arched Composition & Architectural Geometry -->
         <div class="founder-arch-visual">
+          <!-- Outer Decorative Arch with Warm Peach Tint -->
+          <div class="founder-outer-arch" aria-hidden="true"></div>
+
+          <!-- Main Arched Photo Frame -->
           <div class="founder-arch-frame">
             <img src="assets/founder.jpg" alt="P. Palanisamy - Founder &amp; Managing Director, PP Builders &amp; Interiors" class="founder-arch-img" loading="lazy">
           </div>
