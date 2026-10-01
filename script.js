@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initFloatingActions();
   initScrollReveal();
+  initFlipCards();
 });
 
 /* --------------------------------------------------------------------------
@@ -321,3 +322,18 @@ function initScrollReveal() {
     observer.observe(el);
   });
 }
+
+/* --------------------------------------------------------------------------
+   3D Service Flip Cards (Mobile / Touch Toggle Support)
+   -------------------------------------------------------------------------- */
+function initFlipCards() {
+  const flipCards = document.querySelectorAll('.service-card-flip');
+  flipCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Don't toggle flip if clicking an action link inside
+      if (e.target.closest('a')) return;
+      card.classList.toggle('is-flipped');
+    });
+  });
+}
+
