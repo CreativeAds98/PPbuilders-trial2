@@ -180,18 +180,21 @@ function initModalHandler() {
   estimateBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      document.body.classList.add('modal-open');
       modalOverlay.classList.add('active');
     });
   });
 
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
+      document.body.classList.remove('modal-open');
       modalOverlay.classList.remove('active');
     });
   }
 
   modalOverlay.addEventListener('click', (e) => {
     if (e.target === modalOverlay) {
+      document.body.classList.remove('modal-open');
       modalOverlay.classList.remove('active');
     }
   });

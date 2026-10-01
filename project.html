@@ -542,15 +542,112 @@
       border-top: 1px dashed var(--border-subtle);
     }
 
+    /* Ensure modal-overlay sits in front of sticky mobile header */
+    .modal-overlay {
+      z-index: 10000000 !important;
+    }
+
+    body.modal-open .floating-actions {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
     @media (max-width: 768px) {
-      .project-modal-photo-container img {
-        max-height: 300px;
+      .modal-overlay {
+        padding: 12px !important;
       }
+
+      .project-modal-content {
+        max-width: 100%;
+        max-height: 92vh;
+        border-radius: 14px;
+      }
+
+      .project-modal-photo-container img {
+        max-height: 250px;
+      }
+
       .project-modal-specs-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 16px;
       }
+
       .project-modal-body {
-        padding: 20px;
+        padding: 18px 20px 24px;
+      }
+
+      .project-modal-header-row h3 {
+        font-size: 22px;
+      }
+
+      .project-modal-actions {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .project-modal-actions button,
+      .project-modal-actions a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .modal-overlay {
+        padding: 8px !important;
+      }
+
+      .project-modal-close {
+        top: 10px;
+        right: 10px;
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        background: rgba(0, 0, 0, 0.88);
+        border: 2px solid #FFFFFF;
+      }
+
+      .project-modal-badge {
+        top: 10px;
+        left: 10px;
+        font-size: 10px;
+        padding: 4px 10px;
+      }
+
+      .project-modal-photo-container img {
+        max-height: 200px;
+      }
+
+      .project-modal-body {
+        padding: 14px 14px 20px;
+      }
+
+      .project-modal-header-row {
+        margin-bottom: 12px;
+      }
+
+      .project-modal-header-row h3 {
+        font-size: 19px;
+      }
+
+      .project-modal-specs-grid {
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .spec-card {
+        padding: 8px 10px;
+      }
+
+      .spec-card .spec-label {
+        font-size: 9.5px;
+      }
+
+      .spec-card .spec-val {
+        font-size: 12.5px;
       }
     }
 
@@ -1280,10 +1377,12 @@
       const waMsg = encodeURIComponent(`Hello PP Builders & Interiors, I am interested in getting details and estimate for a project similar to ${data.badge} - ${data.client} (${data.location}, ${data.area}).`);
       document.getElementById('modalWhatsAppLink').href = `https://wa.me/917667893130?text=${waMsg}`;
       
+      document.body.classList.add('modal-open');
       document.getElementById('projectDetailModal').classList.add('active');
     }
 
     function closeProjectModal() {
+      document.body.classList.remove('modal-open');
       const modal = document.getElementById('projectDetailModal');
       if (modal) modal.classList.remove('active');
     }

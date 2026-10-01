@@ -2167,9 +2167,9 @@ input[type="range"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(37, 20, 10, 0.7);
-  backdrop-filter: blur(4px);
-  z-index: 2000;
+  background: rgba(20, 10, 5, 0.82);
+  backdrop-filter: blur(6px);
+  z-index: 10000000 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2182,6 +2182,12 @@ input[type="range"] {
 .modal-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+body.modal-open .floating-actions {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .modal-content {
