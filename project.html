@@ -239,6 +239,32 @@
       border-top: 1px dashed var(--border-subtle);
     }
 
+    .project-id-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 2;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #FFF;
+      background: rgba(26, 15, 10, 0.85);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(4px);
+    }
+
+    .project-client-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary-brick);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 3px;
+    }
+
     .btn-view-project {
       font-size: 12px;
       font-weight: 700;
@@ -270,6 +296,262 @@
       border: 1px solid #B2DFCA;
       border-radius: 999px;
       padding: 4px 10px;
+    }
+
+    .ongoing-badge {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #047857;
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      border-radius: 999px;
+      padding: 4px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .coming-soon-badge {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #B45309;
+      background: #FEF3C7;
+      border: 1px solid #FCD34D;
+      border-radius: 999px;
+      padding: 4px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .project-card.coming-soon-card {
+      background: #FAF8F5;
+      border: 1px dashed var(--border-brick);
+    }
+
+    .coming-soon-thumb {
+      background: linear-gradient(135deg, #2b1811 0%, #45251a 50%, #1e110b 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .coming-soon-thumb::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(235, 140, 90, 0.25) 1.5px, transparent 1.5px);
+      background-size: 16px 16px;
+      opacity: 0.6;
+    }
+
+    .coming-soon-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .coming-soon-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      font-size: 20px;
+      margin-bottom: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .coming-soon-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+    }
+
+    .coming-soon-desc {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 4px;
+    }
+
+    .btn-inquire-project {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 7px 14px;
+      background: transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-inquire-project:hover {
+      background: var(--bg-paper);
+      color: var(--primary-brick);
+      border-color: var(--primary-brick);
+    }
+
+    /* Project Detail Modal - Full Photo Showcase Layout */
+    .project-modal-content {
+      max-width: 860px;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 0;
+      border-radius: var(--radius-lg);
+      background: var(--bg-paper);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .project-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 20;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(18, 10, 6, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+      font-size: 16px;
+    }
+
+    .project-modal-close:hover {
+      background: var(--primary-brick);
+      color: #FFFFFF;
+      transform: scale(1.08) rotate(90deg);
+    }
+
+    .project-modal-photo-container {
+      position: relative;
+      width: 100%;
+      background: #140D0A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 3px solid var(--border-brick);
+    }
+
+    .project-modal-photo-container img {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .project-modal-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 10;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #FFF;
+      background: var(--primary-brick);
+      padding: 6px 14px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-modal-body {
+      padding: 28px 32px 32px;
+      background: var(--bg-paper);
+    }
+
+    .project-modal-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .project-modal-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .spec-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .spec-card .spec-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .spec-card .spec-label i {
+      color: var(--accent-gold);
+    }
+
+    .spec-card .spec-val {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--warm-heading);
+    }
+
+    .project-modal-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+
+    @media (max-width: 768px) {
+      .project-modal-photo-container img {
+        max-height: 300px;
+      }
+      .project-modal-specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .project-modal-body {
+        padding: 20px;
+      }
     }
 
     /* Stats bar */
@@ -540,242 +822,244 @@
     <div class="container">
       <div class="projects-grid" id="projectsGrid">
 
-        <!-- 1 -->
+        <!-- PROJECT 01 -->
         <div class="project-card" data-category="residential">
           <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Palanisamy Villa" loading="lazy">
+            <img src="assets/project-01.jpg" alt="Project 01 - B. Selvi, Madurai" loading="lazy">
+            <span class="project-id-badge">PROJECT 01</span>
             <span class="cat-badge">Residential</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Palanisamy Villa</div>
+            <div class="project-client-name">B. SELVI</div>
+            <div class="project-name">Modern Residence</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Coimbatore</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 2,400 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2023</span>
+              <span><i class="fa-solid fa-location-dot"></i> Madurai</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 902 SQ FT</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-view-project" onclick="openProjectModal(1)"><i class="fa-solid fa-eye"></i> View Details</button>
+              <span class="ongoing-badge"><i class="fa-solid fa-person-digging"></i> Ongoing</span>
             </div>
           </div>
         </div>
 
-        <!-- 2 -->
+        <!-- PROJECT 02 -->
         <div class="project-card" data-category="residential">
           <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Murugan Family Residence" loading="lazy">
+            <img src="assets/project-02.jpg" alt="Project 02 - Deepa Manohar, K. Keeranur, Dindigul" loading="lazy">
+            <span class="project-id-badge">PROJECT 02</span>
             <span class="cat-badge">Residential</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Murugan Family Residence</div>
+            <div class="project-client-name">DEEPA MANOHAR</div>
+            <div class="project-name">Contemporary Villa</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Erode</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 1,800 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2024</span>
+              <span><i class="fa-solid fa-location-dot"></i> K. Keeranur, Dindugul</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 1081.00 SQ FT</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-view-project" onclick="openProjectModal(2)"><i class="fa-solid fa-eye"></i> View Details</button>
+              <span class="ongoing-badge"><i class="fa-solid fa-person-digging"></i> Ongoing</span>
             </div>
           </div>
         </div>
 
-        <!-- 3 -->
-        <div class="project-card" data-category="residential">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Krishnamurthy Estate" loading="lazy">
+        <!-- PROJECT 03 -->
+        <div class="project-card coming-soon-card" data-category="residential">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Site Details Updating</div>
+            </div>
+            <span class="project-id-badge">PROJECT 03</span>
             <span class="cat-badge">Residential</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Krishnamurthy Estate</div>
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING RESIDENTIAL</div>
+            <div class="project-name">Modern Villa Project</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Salem</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 3,000 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2022</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> Details Soon</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- 4 -->
-        <div class="project-card" data-category="residential">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Rajan Modern Home" loading="lazy">
+        <!-- PROJECT 04 -->
+        <div class="project-card coming-soon-card" data-category="residential">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Photography in Progress</div>
+            </div>
+            <span class="project-id-badge">PROJECT 04</span>
             <span class="cat-badge">Residential</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Rajan Modern Home</div>
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING RESIDENTIAL</div>
+            <div class="project-name">Courtyard Home</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Tiruppur</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 2,100 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2023</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> Details Soon</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- 5 -->
-        <div class="project-card" data-category="residential">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Gopal Double Storey" loading="lazy">
-            <span class="cat-badge">Residential</span>
-          </div>
-          <div class="project-body">
-            <div class="project-name">Gopal Double Storey</div>
-            <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Karur</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 1,600 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2024</span>
+        <!-- PROJECT 05 -->
+        <div class="project-card coming-soon-card" data-category="commercial">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-building"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Under Construction</div>
             </div>
-            <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="project-card" data-category="residential">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Heritage Bungalow" loading="lazy">
-            <span class="cat-badge">Residential</span>
-          </div>
-          <div class="project-body">
-            <div class="project-name">Heritage Bungalow</div>
-            <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Ooty</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 3,400 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2022</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7 -->
-        <div class="project-card" data-category="commercial">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Selvaraj Commercial Block" loading="lazy">
+            <span class="project-id-badge">PROJECT 05</span>
             <span class="cat-badge">Commercial</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Selvaraj Commercial Block</div>
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING COMMERCIAL</div>
+            <div class="project-name">Commercial Complex</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Coimbatore</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 5,200 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2023</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-clock"></i> In Progress</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- 8 -->
-        <div class="project-card" data-category="commercial">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Tech Park Office Build" loading="lazy">
+        <!-- PROJECT 06 -->
+        <div class="project-card coming-soon-card" data-category="commercial">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Site Finishing Work</div>
+            </div>
+            <span class="project-id-badge">PROJECT 06</span>
             <span class="cat-badge">Commercial</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Tech Park Office Build</div>
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING COMMERCIAL</div>
+            <div class="project-name">Modern Office Space</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Tiruppur</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 8,000 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2023</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-clock"></i> In Progress</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- 9 -->
-        <div class="project-card" data-category="renovation">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Classic Ancestral Reno" loading="lazy">
+        <!-- PROJECT 07 -->
+        <div class="project-card coming-soon-card" data-category="renovation">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-hammer"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Heritage Revival</div>
+            </div>
+            <span class="project-id-badge">PROJECT 07</span>
             <span class="cat-badge">Renovation</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Classic Ancestral Reno</div>
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING RENOVATION</div>
+            <div class="project-name">Ancestral House Restoration</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Salem</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 2,000 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2023</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-clock"></i> In Progress</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- 10 -->
-        <div class="project-card" data-category="renovation">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Vintage Farmhouse Revival" loading="lazy">
+        <!-- PROJECT 08 -->
+        <div class="project-card coming-soon-card" data-category="renovation">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Farmhouse Restoration</div>
+            </div>
+            <span class="project-id-badge">PROJECT 08</span>
             <span class="cat-badge">Renovation</span>
           </div>
           <div class="project-body">
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING RENOVATION</div>
             <div class="project-name">Vintage Farmhouse Revival</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Namakkal</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 2,800 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2024</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-clock"></i> In Progress</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- 11 -->
-        <div class="project-card" data-category="interior">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Teakwood Luxury Interior" loading="lazy">
+        <!-- PROJECT 09 -->
+        <div class="project-card coming-soon-card" data-category="interior">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-couch"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Teak Wood & Modular Fitout</div>
+            </div>
+            <span class="project-id-badge">PROJECT 09</span>
             <span class="cat-badge">Interior</span>
           </div>
           <div class="project-body">
-            <div class="project-name">Teakwood Luxury Interior</div>
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING INTERIOR</div>
+            <div class="project-name">Teakwood Interior Project</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Erode</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 2,200 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2024</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-clock"></i> In Progress</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- 12 -->
-        <div class="project-card" data-category="interior">
-          <div class="project-thumb">
-            <img src="assets/project1.jpg" alt="Royal Pooja Room Interior" loading="lazy">
+        <!-- PROJECT 10 -->
+        <div class="project-card coming-soon-card" data-category="interior">
+          <div class="project-thumb coming-soon-thumb">
+            <div class="coming-soon-content">
+              <div class="coming-soon-icon"><i class="fa-solid fa-shapes"></i></div>
+              <div class="coming-soon-title">Coming Soon</div>
+              <div class="coming-soon-desc">Pooja & Living Concept</div>
+            </div>
+            <span class="project-id-badge">PROJECT 10</span>
             <span class="cat-badge">Interior</span>
           </div>
           <div class="project-body">
+            <div class="project-client-name" style="color:var(--text-light);">UPCOMING INTERIOR</div>
             <div class="project-name">Royal Pooja Room Interior</div>
             <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Coimbatore</span>
-              <span><i class="fa-solid fa-ruler-combined"></i> 450 sq.ft</span>
-              <span><i class="fa-solid fa-calendar-check"></i> 2024</span>
+              <span><i class="fa-solid fa-location-dot"></i> Tamil Nadu</span>
+              <span><i class="fa-solid fa-clock"></i> In Progress</span>
             </div>
             <div class="project-footer">
-              <button class="btn-view-project"><i class="fa-solid fa-eye"></i> View Details</button>
-              <span class="completed-badge">✓ Completed</span>
+              <button class="btn-inquire-project trigger-modal"><i class="fa-solid fa-bell"></i> Inquire</button>
+              <span class="coming-soon-badge"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
             </div>
           </div>
         </div>
@@ -895,6 +1179,54 @@
     </div>
   </div>
 
+  <!-- Project Details Modal -->
+  <div id="projectDetailModal" class="modal-overlay">
+    <div class="modal-content project-modal-content">
+      <button class="project-modal-close" onclick="closeProjectModal()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="project-modal-photo-container">
+        <img id="modalProjectImg" src="" alt="Project Photo">
+        <span class="project-modal-badge" id="modalProjectBadge">PROJECT 01</span>
+      </div>
+
+      <div class="project-modal-body">
+        <div class="project-modal-header-row">
+          <div>
+            <span class="section-tag" style="font-size:11px;margin-bottom:6px;display:inline-block;">CURRENT RESIDENTIAL WORK</span>
+            <h3 id="modalProjectTitle" style="font-family:var(--font-serif);font-size:26px;color:var(--warm-heading);margin:0;"></h3>
+          </div>
+          <span class="ongoing-badge" style="font-size:11px;padding:6px 14px;"><i class="fa-solid fa-person-digging"></i> Ongoing Construction</span>
+        </div>
+
+        <div class="project-modal-specs-grid">
+          <div class="spec-card">
+            <span class="spec-label"><i class="fa-solid fa-user"></i> Client Name</span>
+            <span class="spec-val" id="modalProjectClient"></span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label"><i class="fa-solid fa-location-dot"></i> Location</span>
+            <span class="spec-val" id="modalProjectLocation"></span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label"><i class="fa-solid fa-ruler-combined"></i> Floor Area</span>
+            <span class="spec-val" id="modalProjectArea"></span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label"><i class="fa-solid fa-certificate"></i> Project Status</span>
+            <span class="spec-val" id="modalProjectStatus" style="color:#047857;">Ongoing</span>
+          </div>
+        </div>
+
+        <p id="modalProjectDesc" style="font-size:13.5px;color:var(--text-muted);line-height:1.65;margin:16px 0;"></p>
+
+        <div class="project-modal-actions">
+          <button class="btn-primary-brick trigger-modal" onclick="closeProjectModal()" style="font-size:12px;padding:11px 22px;"><i class="fa-solid fa-calculator"></i> GET SIMILAR ESTIMATE</button>
+          <a id="modalWhatsAppLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-outline-white" style="font-size:12px;padding:11px 22px;border-color:#25D366;color:#1E7E34;"><i class="fa-brands fa-whatsapp"></i> INQUIRE VIA WHATSAPP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Floating WhatsApp & Scroll Up Buttons -->
   <div class="floating-actions">
     <a href="https://wa.me/917667893130?text=Hello%20PP%20Builders%20%26%20Interiors,%20I%20would%20like%20to%20inquire%20about%20your%20services"
@@ -908,6 +1240,60 @@
 
   <script src="script.js"></script>
   <script>
+    // Project modal data
+    const projectDetails = {
+      1: {
+        badge: 'PROJECT 01',
+        title: 'B. Selvi Residence',
+        client: 'B. Selvi',
+        location: 'Madurai',
+        area: '902 SQ FT',
+        status: 'Ongoing',
+        image: 'assets/project-01.jpg',
+        desc: 'A striking single-story modern home built with precision engineering. Highlights include elegant vertical wooden battens along the staircase, natural stone entrance pillar cladding with accent sconces, teak-finished designer door, and maximized natural ventilation.'
+      },
+      2: {
+        badge: 'PROJECT 02',
+        title: 'Deepa Manohar Residence',
+        client: 'Deepa Manohar',
+        location: 'K. Keeranur, Dindigul',
+        area: '1081.00 SQ FT',
+        status: 'Ongoing',
+        image: 'assets/project-02.jpg',
+        desc: 'Contemporary open-plan residence tailored for modern family living. Highlights include a generous shaded car porch with recessed spot luminaires, textured stacked-stone accent wall at the main foyer, exterior staircase access, and landscaped perimeter.'
+      }
+    };
+
+    function openProjectModal(id) {
+      const data = projectDetails[id];
+      if (!data) return;
+      document.getElementById('modalProjectImg').src = data.image;
+      document.getElementById('modalProjectImg').alt = data.title;
+      document.getElementById('modalProjectBadge').textContent = data.badge;
+      document.getElementById('modalProjectTitle').textContent = data.title;
+      document.getElementById('modalProjectClient').textContent = data.client;
+      document.getElementById('modalProjectLocation').textContent = data.location;
+      document.getElementById('modalProjectArea').textContent = data.area;
+      document.getElementById('modalProjectStatus').textContent = data.status || 'Ongoing';
+      document.getElementById('modalProjectDesc').textContent = data.desc;
+      
+      const waMsg = encodeURIComponent(`Hello PP Builders & Interiors, I am interested in getting details and estimate for a project similar to ${data.badge} - ${data.client} (${data.location}, ${data.area}).`);
+      document.getElementById('modalWhatsAppLink').href = `https://wa.me/917667893130?text=${waMsg}`;
+      
+      document.getElementById('projectDetailModal').classList.add('active');
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('projectDetailModal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    document.getElementById('projectDetailModal')?.addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeProjectModal();
+      }
+    });
+
     // Filter logic
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
